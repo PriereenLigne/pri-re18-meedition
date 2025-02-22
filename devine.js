@@ -178,7 +178,7 @@ function stopGame() {
 
 // Ajouter l'événement de redirection vers la page d'accueil
 document.getElementById("go-home").addEventListener("click", () => {
-    window.location.href = "/";  // Rediriger vers la page d'accueil du jeu
+    window.location.href = "jeux.html";  // Rediriger vers la page d'accueil du jeu
 });
 
 // Lancer le jeu
