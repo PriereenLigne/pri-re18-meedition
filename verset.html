@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Versets Bibliques</title>
+    <link rel="stylesheet" href="verset.css">
+    <header>
+    <h1>🎯 Défi Biblique :</h1> <h3>Teste tes connaissances!</h3> 
+    <a href="jeux.html" class="btn-retour">⬅ Retour aux autres jeux</a>
+</header>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Jeu de Versets Bibliques</h1>
+        <div id="verse-container">
+            <p id="reference"></p>
+            <input type="text" id="user-input" placeholder="Écrivez votre réponse..." />
+            <div id="feedback"></div>
+            <button id="validate-button">Valider</button>
+            <button id="next-button" style="display: none;">Suivant</button>
+            <button id="stop-game">Arrêter</button>
+            <button id="back-home" style="display: none;" onclick="goToHomePage()">Retour à l'accueil</button>
+        </div>
+        <div id="score-display"></div>
+    </div>
+    <script src="verset.js"></script>
+</body>
+</html>

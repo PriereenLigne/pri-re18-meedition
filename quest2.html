@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu 2: Compléter le verset</title>
+    <link rel="stylesheet" href="lab.css">
+</head>
+<body>
+
+    <header>
+        <h1>Jeu 2: Compléter le verset</h1>
+        <nav>
+            <a href="index.html">Retour à l'accueil</a>
+        </nav>
+    </header>
+
+    <section>
+        <p>Complétez le verset: "L'Éternel est mon ______, je ne manquerai de rien." </p>
+        <form id="completerForm">
+            <input type="text" id="answer" placeholder="Entrez votre réponse">
+            <button type="button" onclick="checkCompleteVerse()">Soumettre</button>
+        </form>
+        <p id="completeResult"></p>
+    </section>
+
+    <script src="game.js"></script>
+</body>
+</html>

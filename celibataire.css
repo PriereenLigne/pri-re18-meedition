@@ -1,0 +1,163 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to top right, #FF6F61, #FFC300, #6A5ACD); /* Dégradé vif et lumineux */
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-size: 200% 200%;
+    animation: gradientAnimation 15s ease infinite; /* Animation de dégradé */
+}
+
+/* Animation du fond dégradé */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Conteneur du jeu */
+.game-container {
+    width: 80%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.9); /* Fond blanc semi-transparent */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4); /* Ombre douce et lumineuse */
+    color: black;
+}
+
+/* Titres */
+h1 {
+    color: #FF6F61; /* Couleur rouge vif */
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8); /* Ombre lumineuse autour du texte */
+}
+
+/* Statistiques */
+p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.8); /* Ombre lumineuse pour plus de brillance */
+}
+
+/* Liste des réponses */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Options de réponse */
+li {
+    background: linear-gradient(to right, #00BFFF, #1E90FF); /* Dégradé bleu lumineux */
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0, 0, 255, 0.4); /* Ombre brillante autour des réponses */
+    transition: all 0.3s ease;
+}
+
+li:hover {
+    background: linear-gradient(to right, #1E90FF, #00BFFF); /* Inversion des couleurs au survol */
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 0, 255, 0.6); /* Lumière autour des réponses */
+}
+
+/* Boutons */
+button {
+    margin: 15px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.8); /* Ombre lumineuse pour les boutons */
+}
+
+/* Bouton Suivant */
+#next-button {
+    background: linear-gradient(to right, #28a745, #218838); /* Dégradé vert vif */
+    color: white;
+    box-shadow: 0px 4px 15px rgba(0, 255, 0, 0.5);
+}
+
+#next-button:hover {
+    background: linear-gradient(to right, #218838, #28a745);
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(0, 255, 0, 0.7);
+}
+
+/* Bouton Arrêter */
+#stop-button {
+    background: linear-gradient(to right, #dc3545, #c82333); /* Dégradé rouge vif */
+    color: white;
+    box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.5);
+}
+
+#stop-button:hover {
+    background: linear-gradient(to right, #c82333, #dc3545);
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(255, 0, 0, 0.7);
+}
+
+/* Bouton Retour */
+#home-button {
+    background: linear-gradient(to right, #ffc107, #e0a800); /* Dégradé jaune-orangé */
+    color: black;
+    box-shadow: 0px 4px 15px rgba(255, 204, 0, 0.5);
+}
+
+#home-button:hover {
+    background: linear-gradient(to right, #e0a800, #ffc107);
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(255, 204, 0, 0.7);
+}
+
+/* Effet au survol pour tous les boutons */
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); /* Ombre douce pour plus de brillance */
+}
+
+/* Effet de surbrillance des résultats */
+#result {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #FF6F61;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+}
+/* Applique le style aux messages d'appréciation */
+.appreciation-message {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Applique un style aux titres avant les ":" */
+.appreciation-message .title {
+    font-weight: bold;
+    color: #007bff; /* Couleur pour le titre avant les ":" */
+}
+
+/* Applique un style aux conseils après les ":" */
+.appreciation-message .advice {
+    font-style: italic;
+    color: #28a745; /* Couleur pour les conseils après les ":" */
+}

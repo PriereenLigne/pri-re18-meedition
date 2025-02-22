@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section Témoignages et Commentaires</title>
+    <link rel="stylesheet" href="appreciation.css">
+</head>
+<body>
+    <!-- Formulaire pour ajouter un témoignage -->
+    <section id="testimonial-section">
+        <h2>Laissez un Témoignage ou un Commentaire</h2>
+        <form id="testimonial-form">
+            <textarea id="testimonial-input" placeholder="Partagez votre expérience..." required></textarea>
+            <button type="submit">Soumettre</button>
+        </form>
+    </section>
+
+    <!-- Liste des témoignages -->
+    <section id="testimonials-list">
+        <h3>Témoignages</h3>
+        <ul id="testimonials">
+            <!-- Témoignages seront ajoutés ici -->
+        </ul>
+    </section>
+
+    <!-- Section des commentaires -->
+    <section id="comments-section">
+        <h3>Commentaires</h3>
+        <ul id="comments-list">
+            <!-- Commentaires seront ajoutés ici -->
+        </ul>
+    </section>
+
+    <!-- Boutons J'aime -->
+    <section id="like-buttons">
+        <h3>Exprimez votre appréciation</h3>
+        <button id="like-btn">👍 J'aime</button>
+        <p id="like-count">0</p>
+    </section>
+
+    <script src="appreciation.js"></script>
+</body>
+</html>

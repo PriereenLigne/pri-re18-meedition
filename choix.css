@@ -1,0 +1,162 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #FFB6C1, #FF6347, #FF4500); /* Dégradé similaire à celui du site de prière */
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Conteneur principal du jeu */
+.game-container {
+    background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent pour un bon contraste */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Titre principal du jeu */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Style de la question */
+#question {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Liste des options */
+#options {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#options li {
+    background-color: #FF6347;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#options li:hover {
+    background-color: #FF4500; /* Changement de couleur au survol */
+}
+
+/* Style du bouton de suivant */
+#next-button, #stop-game {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+#next-button:hover, #stop-game:hover {
+    background-color: #45a049;
+}
+
+/* Style pour le résultat final */
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    color: #FFFF00; /* Jaune pour la mise en évidence du résultat */
+}
+
+#score {
+    font-size: 18px;
+    color: #FFFF00;
+}
+
+/* Design des boutons pour le résultat */
+#show-result-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#show-result-button:hover {
+    background-color: #FF6347;
+}
+
+/* Style pour désactiver les options après réponse */
+#options li.disabled {
+    background-color: #dcdcdc;
+    cursor: not-allowed;
+}
+
+/* Mise en page responsive */
+@media (max-width: 600px) {
+    .game-container {
+        width: 90%;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    #question {
+        font-size: 16px;
+    }
+    #options li {
+        font-size: 14px;
+    }
+}
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Dégradé bleu-violet */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.btn-retour {
+    display: inline-block;
+    background: white;
+    color: #2575fc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-retour:hover {
+    background: #2575fc;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}

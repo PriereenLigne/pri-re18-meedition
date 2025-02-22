@@ -1,0 +1,676 @@
+/* Style général */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: #FFF3E0; /* Fond doux pour un bon contraste */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style du header */
+header {
+    background: linear-gradient(90deg, #FF4500, #FF8C00); /* Effet de feu en dégradé */
+    color: white;
+    padding: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Boutons principaux */
+.main-btn {
+    background: linear-gradient(90deg, #FF4500, #FF8C00); /* Effet flamme */
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    padding: 12px;
+    margin: 10px;
+    cursor: pointer;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.main-btn:hover {
+    background: #FF5722; /* Rouge plus intense au survol */
+}
+
+/* Sous-boutons */
+.sub-btn {
+    background-color: #FFD700; /* Or lumineux */
+    color: #333;
+    border: none;
+    font-size: 1em;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    width: 70%;
+    max-width: 350px;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.sub-btn:hover {
+    background-color: #FFA500; /* Orange profond */
+    color: white;
+}
+
+/* Contenu des sous-sections */
+.hidden {
+    display: none;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Sections avec différentes couleurs inspirées du feu */
+#verset {
+    background-color: #FFD700; /* Jaune doré éclatant */
+    color: #333;
+}
+
+#explication {
+    background-color: #FF8C00; /* Orange flamme */
+    color: white;
+}
+
+#application {
+    background-color: #FF4500; /* Rouge feu intense */
+    color: white;
+}
+
+#priere {
+    background-color: #E65100; /* Orange brûlant */
+    color: white;
+}
+
+/* Style des sections de prières */
+#requetes div {
+    background-color: #D84315; /* Rouge profond pour l’intensité */
+    color: white;
+}
+
+#declarations div {
+    background-color: #D84315; /* Or spirituel */
+    color: #333;
+}
+
+/* Ajout d'un effet d'ombre */
+.main-btn, .sub-btn {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hidden p {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+/* Style général pour la section */
+#verset {
+    background: linear-gradient(135deg, #ff9800, #ff5722); /* Dégradé feu 🔥 */
+    color: #fff; /* Texte en blanc */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+}
+
+/* Style du verset biblique */
+#verset p {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Style du verset (texte en or pour symboliser la richesse de la Parole) */
+#verset strong {
+    color: #ffd700; /* Or brillant ✨ */
+    font-size: 22px;
+}
+
+/* Icône de livre 📖 et référence du verset */
+#verset em {
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    color: #c7f0ff; /* Bleu ciel doux */
+    display: block;
+    margin-top: 10px;
+}
+
+/* Bloc de mise en avant du texte */
+#verset blockquote {
+    font-family: 'Lucida Handwriting', cursive;
+    font-size: 20px;
+    color: #ffeb3b; /* Jaune éclatant pour attirer l'attention */
+    border-left: 4px solid #ffcc00; /* Bordure gauche dorée */
+    padding-left: 15px;
+    margin: 15px 0;
+}
+
+/* Animation subtile au survol */
+#verset:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+
+/* Ajout d'une lueur autour du texte */
+#verset p:hover {
+    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8); /* Lueur dorée */
+}
+/* Style général pour l'explication */
+#explication {
+    background: linear-gradient(135deg, #ff5722, #ff9800); /* Dégradé orange-feu */
+    color: #fff; /* Texte en blanc pour contraster avec le fond */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+/* Titre principal de l'explication */
+#explication h3 {
+    font-family: 'Georgia', serif;
+    font-size: 24px;
+    color: #ffd700; /* Jaune or pour attirer l'attention */
+    text-align: center;
+    margin-bottom: 15px;
+}
+#explication b {font-family:'Normal ';
+     font-size: 24px;
+     font-weight: Normal; bold;
+    color: #FF0000;
+}
+/* Style de la section de lecture */
+#lecture {
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Légère transparence pour le fond */
+    padding: 15px;
+    border-left: 4px solid #ffeb3b; /* Bordure jaune éclatante */
+}
+
+/* Style des éléments de la liste d'explication */
+#explication ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#explication li {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+/* Mise en valeur des titres dans la liste */
+#explication li strong {
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    color: #ffeb3b; /* Jaune doré pour souligner l'importance des phrases */
+}
+
+/* Effet au survol pour les éléments de la liste */
+#explication li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Mise en valeur de l'explication avec une bordure */
+#explication p {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/* Style pour une animation subtile sur la section */
+#explication:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+
+/* Style des éléments de la liste d'application */
+#application ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#application li {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+#application b {font-family:'Normal ';
+     font-size: 22px;
+     font-weight: Normal; bold;
+    color: #FFeb3b;
+}
+/* Mise en valeur des titres dans la liste */
+#application li strong {
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    color: #ffeb3b; /* Jaune doré pour souligner l'importance des phrases */
+}
+
+/* Effet au survol pour les éléments de la liste */
+#application li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Mise en valeur de l'application avec une bordure */
+#application p {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/* Style pour une animation subtile sur la section */
+#application:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+/* Style des éléments de la liste d'application */
+#perso ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#perso li {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+/* Mise en valeur des titres dans la liste */
+#perso li strong {
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    color: #ffeb3b; /* Jaune doré pour souligner l'importance des phrases */
+}
+
+/* Effet au survol pour les éléments de la liste */
+#perso li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Mise en valeur de l'application avec une bordure */
+#perso p {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/* Style pour une animation subtile sur la section */
+#perso:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+/* Style des éléments de la liste d'eglise */
+#eglise ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#eglise li {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+/* Mise en valeur des titres dans la liste */
+#eglise li strong {
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    color: #ffeb3b; /* Jaune doré pour souligner l'importance des phrases */
+}
+
+/* Effet au survol pour les éléments de la liste */
+#eglise li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Mise en valeur de l'application avec une bordure */
+#eglise p {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/* Style pour une animation subtile sur la section */
+#eglise:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+/* Style des éléments de la liste de nation */
+#nation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#nation li {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+/* Mise en valeur des titres dans la liste */
+#nation li strong {
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    color: #ffeb3b; /* Jaune doré pour souligner l'importance des phrases */
+}
+
+/* Effet au survol pour les éléments de la liste */
+#nation li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Mise en valeur de l'application avec une bordure */
+#nation p {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/* Style pour une animation subtile sur la section */
+#nation:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+/* Style des éléments de la liste de special */
+#speciale ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#speciale li {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+/* Mise en valeur des titres dans la liste */
+#speciale li strong {
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    color: #ffeb3b; /* Jaune doré pour souligner l'importance des phrases */
+}
+
+/* Effet au survol pour les éléments de la liste */
+#speciale li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Mise en valeur de l'application avec une bordure */
+#speciale p {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/* Style pour une animation subtile sur la section */
+#speciale:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+/* Style des éléments de la liste de special */
+#prosp ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#prosp li {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+/* Mise en valeur des titres dans la liste */
+#prosp li strong {
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    color: #ffeb3b; /* Jaune doré pour souligner l'importance des phrases */
+}
+
+/* Effet au survol pour les éléments de la liste */
+#prosp li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Mise en valeur de l'application avec une bordure */
+#prosp p {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/* Style pour une animation subtile sur la section */
+#prosp:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+/* Style des éléments de la liste de sante */
+#sante ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sante li {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+/* Mise en valeur des titres dans la liste */
+#sante li strong {
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    color: #ffeb3b; /* Jaune doré pour souligner l'importance des phrases */
+}
+
+/* Effet au survol pour les éléments de la liste */
+#sante li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Mise en valeur de l'application avec une bordure */
+#sante p {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/* Style pour une animation subtile sur la section */
+#sante:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+/* Style des éléments de la liste de special */
+#sante ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#depr li {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+/* Mise en valeur des titres dans la liste */
+#depr li strong {
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    color: #ffeb3b; /* Jaune doré pour souligner l'importance des phrases */
+}
+
+/* Effet au survol pour les éléments de la liste */
+#depr li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Mise en valeur de l'application avec une bordure */
+#depr p {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/* Style pour une animation subtile sur la section */
+#depr :hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+/* Style des éléments de la liste de special */
+#depr ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#depr li {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+/* Mise en valeur des titres dans la liste */
+#depr li strong {
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    color: #ffeb3b; /* Jaune doré pour souligner l'importance des phrases */
+}
+
+/* Effet au survol pour les éléments de la liste */
+#depr li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Mise en valeur de l'application avec une bordure */
+#depr p {
+    font-family: 'Georgia', serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/* Style pour une animation subtile sur la section */
+#depr:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+/* Style pour la section Audio */
+#audio-section {
+    background: linear-gradient(135deg, #f39c12, #f1c40f); /* Dégradé doré */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    color: #fff; /* Texte blanc pour contraster avec le fond */
+    text-align: center;
+}
+
+/* Titre de la section Audio */
+#audio-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+/* Style pour le lecteur audio */
+#audio-section audio {
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+/* Style pour le sélecteur de vitesse */
+#audio-section select {
+    background-color: #fff;
+    color: #333;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+/* Survol de la section Audio */
+#audio-section:hover {
+    background: linear-gradient(135deg, #f1c40f, #f39c12); /* Inverser le dégradé au survol */
+    cursor: pointer;
+}

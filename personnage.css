@@ -1,0 +1,79 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    color: white;
+}
+
+/* Conteneur principal */
+.game-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Question */
+#question {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Options */
+#options {
+    list-style: none;
+    padding: 0;
+}
+
+#options li {
+    background: #ff5e62;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#options li:hover {
+    background: #ff9966;
+}
+
+/* Boutons */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#next-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#stop-button {
+    background-color: #d9534f;
+    color: white;
+}
+
+#home-button {
+    background-color: #007BFF;
+    color: white;
+    display: none;
+}
+
+/* Messages finaux */
+#result {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
