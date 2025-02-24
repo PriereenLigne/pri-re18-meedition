@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu Biblique</title>
+    <link rel="stylesheet" href="choix.css">
+    <header>
+    <h1>🎯 Défi Biblique :</h1> <h3>Teste tes connaissances!</h3> 
+    <a href="jeux.html" class="btn-retour">⬅ Retour aux autres jeux</a>
+</header>
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>Jeu Biblique</h1>
+        <div id="game-summary" style="display: none; font-size: 18px; font-weight: bold; color: black;">
+    <p id="total-questions"></p>
+    <p id="played-questions"></p>
+    <p id="correct-answers"></p>
+    <p id="final-score"></p>
+    <p id="success-percentage"></p>
+</div>
+          <div id="game-info">
+    <p id="score" style="font-size: 18px; font-weight: bold; color: blue;">Score : 0</p>
+    <p id="errors" style="font-size: 18px; font-weight: bold; color: orange;">Erreurs : 0</p>
+    <p id="played" style="font-size: 18px; font-weight: bold; color: green;">Questions jouées : 0</p>
+    <p id="lives" style="font-size: 18px; font-weight: bold; color: red;">Vies restantes : 3</p>
+</div>
+        <div id="question-container">
+            <p id="question"></p>
+        </div>
+        
+        <ul id="options">
+            <!-- Les options de réponses seront insérées ici par le JavaScript -->
+        </ul>
+        
+        <div id="result" style="display:none;">
+            <p id="score"></p>
+        </div>
+
+        <button id="next-button">Question suivante</button>
+        <button id="stop-game">Arrêter le jeu</button>
+        <button id="go-home" style="display:none;">Retour à l'Accueil</button>
+    </div>
+
+    <script src="choix.js"></script>
+</body>
+</html>

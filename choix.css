@@ -1,0 +1,301 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #11998E , #38EF7D, #20BF55); /* Dégradé similaire à celui du site de prière */
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Conteneur principal du jeu */
+.game-container {
+    background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent pour un bon contraste */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Titre principal du jeu */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Style de la question */
+#question {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Liste des options */
+#options {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#options li {
+    background-color: #FF6347;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#options li:hover {
+    background-color: #FF4500; /* Changement de couleur au survol */
+}
+
+/* Style du bouton de suivant */
+#next-button, #stop-game {
+    padding: 10px 20px;
+    background-color: #FF4;
+    color: red;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+#next-button:hover, #stop-game:hover {
+    background-color: #45a049;
+}
+
+/* Style pour le résultat final */
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    color: #FFFF00; /* Jaune pour la mise en évidence du résultat */
+}
+
+#score {
+    font-size: 18px;
+    color: #FFFF00;
+}
+
+/* Design des boutons pour le résultat */
+#show-result-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#show-result-button:hover {
+    background-color: #FF6347;
+}
+
+/* Style pour désactiver les options après réponse */
+#options li.disabled {
+    background-color: #dcdcdc;
+    cursor: not-allowed;
+}
+
+/* Mise en page responsive */
+@media (max-width: 600px) {
+    .game-container {
+        width: 90%;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    #question {
+        font-size: 16px;
+    }
+    #options li {
+        font-size: 14px;
+    }
+}
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Dégradé bleu-violet */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.btn-retour {
+    display: inline-block;
+    background: white;
+    color: #2575fc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-retour:hover {
+    background: #2575fc;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+#game-info {
+    display: flex;
+    flex-direction: column; /* Alignement vertical */
+    align-items: center; /* Centrage horizontal */
+    background-color: #f8f9fa; /* Fond clair */
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px; /* Ajustement de la largeur */
+    margin: 20px auto; /* Centrage */
+}
+
+#game-info p {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%; /* Prend toute la largeur */
+    margin: 5px 0; /* Espacement entre les éléments */
+}
+
+/* Styles individuels */
+#score {
+    color: #007bff;
+    border: 2px solid #007bff;
+    background-color: #e3f2fd;
+}
+
+#errors {
+    color: #ff9800;
+    border: 2px solid #ff9800;
+    background-color: #fff3e0;
+}
+
+#played {
+    color: #28a745;
+    border: 2px solid #28a745;
+    background-color: #e9f7ef;
+}
+
+#lives {
+    color: #dc3545;
+    border: 2px solid #dc3545; /* Même structure que les autres */
+    background-color: #f8d7da; /* Fond rouge clair */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100%;
+    margin: 5px 0;
+}
+#total-questions {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f0f8ff;
+    color: #00008b;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+#played-questions {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #e6ffe6;
+    color: #006400;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+#correct-answers {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffffe0;
+    color: #ff8c00;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+#final-score {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff0f5;
+    color: #8a2be2;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+#success-percentage {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffcccc;
+    color: #d10000;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+#go-home {
+    display: none; /* Il est caché par défaut, affiché avec JavaScript */
+    background-color: #008; /* Vert */
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px; /* Espacement intérieur */
+    border: none;
+    border-radius: 8px; /* Coins arrondis */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre discrète */
+    transition: all 0.3s ease; /* Transition fluide */
+}
+
+/* Effet de survol */
+#go-home:hover {
+    background-color: #45a049; /* Changer légèrement la couleur au survol */
+    transform: scale(1.05); /* Légère animation de zoom */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+}
+
+/* Animation lors de l'affichage */
+#go-home.show {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
