@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Questions</title>
+    <link rel="stylesheet" href="quiz.css">
+    <header>
+    <h2>🎯 Défi Biblique :</h2> <h4>Teste tes connaissances!</h4> 
+    <a href="jeux.html" class="btn-retour">⬅ Retour aux autres jeux</a>
+</header>
+</head>
+<body>
+  <div id="game-info">
+    <p><strong>Score :</strong> <span id="score-display">0</span></p>
+    <p><strong>Erreurs :</strong> <span id="wrong-answers-display">0</span></p>
+    <p><strong>Questions jouées :</strong> <span id="questions-played-display">0</span></p>
+    <p><strong>Vies restantes :</strong> <span id="lives-remaining-display">3</span></p>
+</div>
+    <div class="game-container">
+        <h3>Jeu de Questions</h3>
+        <div id="question-container">
+            <p id="question"></p>
+            <ul id="answer-options">
+                <!-- Les options de réponses seront générées ici -->
+            </ul>
+        </div>
+        <p id="result"></p>
+        <button id="next-button">Suivant</button>
+        <button id="show-result-button" style="display:none;">Voir Résultat</button>
+        <button id="stop-game">Arrêter</button>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
