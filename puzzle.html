@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Biblique</title>
+    <link rel="stylesheet" href="puzzle.css">
+</head>
+<body>
+    <h1>Puzzle Biblique</h1>
+    <p><h3>Reconstitue l'image en plaçant correctement les pièces.</h3></p>
+
+    <div id="game-info">
+        <span>Score : <span id="score">0</span></span>
+        <span>Vies restantes : <span id="lives">3</span></span>
+        <span>Temps restant : <span id="timer">00:00</span></span>
+    </div>
+    <select id="image-selector">
+  <option value="pu.jpg">Image 1</option>
+  <option value="pu2.jpg">Image 2</option>
+  <option value="pu3.jpg">Image 3</option>
+  <option value="pu4.jpg">Image 4</option>
+  <option value="pu5.jpg">Image 5</option>
+  <option value="pu6.jpg">Image 6</option>
+  <option value="pu7.jpg">Image 7</option>
+ <option value="pu8.jpg">Image 8</option>
+ <option value="pu9.jpg">Image 9</option>
+ <option value="pu10.jpg">Image 10</option>
+ <option value="pu11.jpg">Image 11</option>
+ <option value="pu12.jpg">Image 12</option>
+ <option value="pu13.jpg">Image 13</option>
+  <!-- Ajoute d'autres options pour chaque image -->
+</select>
+<select id="difficulty-selector">
+    <option value="easy">Facile (3x3)</option>
+    <option value="medium">Moyen (4x4)</option>
+    <option value="hard">Difficile (5x5)</option>
+    <option value="very-hard">Très Difficile (6x6)</option>
+</select>
+    <div id="puzzle-container">
+        <div id="game-board"></div>
+    </div>
+
+    <div id="reference-container">
+        <p>Image de référence :</p>
+        <img id="reference-image" src="" alt="Référence">
+    </div>
+
+    <button id="next-button" style="display: none;">Puzzle Suivant</button>
+   <button id="back-button">Retour</button>
+
+    <p id="message"></p>
+
+    <script src="puzzle.js"></script>
+</body>
+</html>

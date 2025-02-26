@@ -1,0 +1,139 @@
+/* Style général de la page */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Dégradé de fond */
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur du jeu */
+#game-board {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    position: relative;
+    border: 2px solid white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5); /* Légère transparence pour l'effet */
+    border-radius: 10px;
+}
+
+/* Style des pièces du puzzle */
+.piece {
+    display: inline-block;
+    margin: 2px;
+    position: absolute;
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Dégradé de couleurs */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Animation de déplacement */
+}
+
+.piece:hover {
+    transform: scale(1.1); /* Agrandir la pièce au survol */
+}
+
+/* Style pour l'image de référence */
+#reference-image {
+    max-width: 100%;
+    max-height: 200px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Message en bas du jeu */
+#message {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Affichage du score */
+#score {
+    font-size: 22px;
+    margin-top: 10px;
+    padding: 5px 15px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b); /* Dégradé du score */
+    color: white;
+    border-radius: 5px;
+}
+
+/* Affichage du timer */
+#timer {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 5px 15px;
+    background: linear-gradient(to right, #008000, yellow); /* Dégradé du timer */
+    color: white;
+    border-radius: 5px;
+}
+
+/* Affichage des vies restantes */
+#lives {
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 5px 15px;
+    background: linear-gradient(to left, #000000, #f44336); /* Dégradé des vies */
+    color: yellow;
+    border-radius: 5px;
+}
+
+/* Sélecteur de niveau de difficulté */
+#difficulty-selector, #image-selector {
+    padding: 10px;
+    font-size: 16px;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin-top: 10px;
+}
+
+#difficulty-selector:hover, #image-selector:hover {
+    cursor: pointer;
+}
+
+/* Bouton "Next" */
+#next-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #ff5f6d, #ffc3a0); /* Dégradé pour le bouton */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#next-button:hover {
+    background: linear-gradient(to left, #ff5f6d, #ffc3a0); /* Changer de direction au survol */
+}
+#score {
+    font-size: 20px;
+    font-weight: bold;
+    color: #008; /* Vert pour les points */
+    margin-top: 10px;
+}
+#back-button {
+    background-color: red; /* Couleur de fond verte */
+    color: white; /* Texte en blanc */
+    font-size: 16px; /* Taille de police */
+    padding: 10px 20px; /* Espacement autour du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer pour indiquer que c'est un bouton cliquable */
+    transition: background-color 0.3s ease; /* Transition pour la couleur de fond au survol */
+    text-decoration: none; /* Supprimer le soulignement si le bouton est un lien */
+}
+
+#back-button:hover {
+    background-color: #45a049; /* Couleur de fond lorsque le bouton est survolé */
+}
+
+#back-button:focus {
+    outline: none; /* Supprimer le contour lors du focus */
+}
