@@ -1,0 +1,146 @@
+/* Réinitialisation des styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.9), rgba(255, 140, 0, 0.9), rgba(255, 0, 0, 0.7));
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Ajustement du titre */
+.header-container {
+    width: 105%;
+    text-align: center;
+    display: flex;100
+    justify-content: center;
+    align-items: center;
+    padding: 110px 0;
+    background: rgba(0, 0, 0, 0.6);
+    border-bottom: 15px solid #fff;
+}
+
+/* Assurer que le h1 occupe toute la largeur */
+.header-container h1 {
+    width: 100%;
+    font-size: 2.0rem;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 165, 0, 0.9);
+}
+
+
+/* Section d'introduction */
+.intro {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+.intro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255, 140, 0, 1), 0 0 30px rgba(255, 69, 0, 1);
+}
+
+.intro p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Navigation */
+nav {
+    width: 100%;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+nav li {
+    flex: 1 1 20%;
+    max-width: 200px;
+    min-width: 150px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    padding: 12px;
+    border-radius: 8px;
+    background: linear-gradient(45deg, rgba(255, 140, 0, 1), rgba(255, 69, 0, 1));
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.8), 0 0 25px rgba(255, 140, 0, 1);
+    transition: background 0.4s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    background: linear-gradient(45deg, rgba(255, 69, 0, 1), rgba(255, 140, 0, 1));
+    transform: scale(1.05);
+}
+
+/* Pied de page */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Animation de dégradé pour le fond */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav li {
+        width: 100%;
+        max-width: none;
+    }
+}

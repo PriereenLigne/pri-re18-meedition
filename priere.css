@@ -1,800 +1,434 @@
-/* Style général */
-body {
-    font-family: 'Poppins', sans-serif;
+.logo-container {
+    position: absolute; /* Positionnement absolu pour le placer dans le coin */
+    top: 5px; /* Distance du haut */
+    left: 5px; /* Distance de la gauche */
+}
+
+.logo {
+    width: 40px; /* Largeur du logo (ajuste selon besoin) */
+    height: auto; /* Hauteur automatique pour garder les proportions */
+}
+    /* CSS pour la section des prières */
+        .prieres-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 150px; /* Espacement entre les boîtes */
+            padding: 20px; /* Espacement interne */
+        }
+        .main-container {
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+        .introduction, .fonctionnalites, .appels-a-l-action {
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 50px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #8B0000;
+            color: white;
+            text-align: center;
+            padding: 3px 25;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        /* CSS pour les sections avec accordéon */
+        .section {
+            border: 1px solid #800;
+            border-radius: 5px;
+            margin-bottom: 20px; }
+        .section-title {
+            background-color: #f4f4f4;
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 10px solid #ddd;
+ }
+
+        .section-content {
+            display: none;
+            padding: 10px;
+        }
+        nav ul li a.active {
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+#a-propos {
+    background-color: #f8f9fa; /* Couleur de fond douce */
+    color: #333; /* Couleur du texte */
+    padding: 30px 20px; /* Espacement interne */
+    margin: 40px 20px; /* Marge autour */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+#a-propos h2 {
     text-align: center;
-    background-color: #FFF3E0; /* Fond doux pour un bon contraste */
+    font-size: 36px; /* Taille de titre */
+    margin-bottom: 20px; /* Espace sous le titre */
+    color: #007bff; /* Couleur du titre */
+    text-transform: uppercase; /* Mettre en majuscules */
+}
+
+.tableau-a-propos {
+    width: 100%; /* Largeur du tableau */
+    border-collapse: collapse; /* Fusionner les bordures */
+    margin-top: 20px; /* Espace au-dessus du tableau */
+}
+
+.tableau-a-propos th, .tableau-a-propos td {
+    border: 1px solid #007bff; /* Bordure des cellules */
+    padding: 15px; /* Espacement interne */
+    text-align: left; /* Alignement du texte à gauche */
+}
+
+.tableau-a-propos th {
+    background-color: #007bff; /* Couleur de fond pour les en-têtes */
+    color: white; /* Couleur du texte des en-têtes */
+    text-transform: uppercase; /* Mettre en majuscules */
+}
+
+.tableau-a-propos tr:nth-child(even) {
+    background-color: #f2f2f2; /* Couleur de fond pour les lignes paires */
+}
+
+.tableau-a-propos tr:hover {
+    background-color: #e9ecef; /* Couleur au survol des lignes */
+}
+#contact {
+    background-color: #ffffff; /* Couleur de fond blanche */
+    color: #333; /* Couleur du texte */
+    padding: 30px 20px; /* Espacement interne */
+    margin: 40px 20px; /* Marge autour */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 36px; /* Taille de titre */
+    margin-bottom: 20px; /* Espace sous le titre */
+    color: #28a745; /* Couleur du titre */
+    text-transform: uppercase; /* Mettre en majuscules */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Colonne pour le formulaire */
+    max-width: 600px; /* Largeur maximum du formulaire */
+    margin: auto; /* Centrer le formulaire */
+}
+
+.contact-form label {
+    margin-bottom: 10px; /* Espace sous les labels */
+    font-weight: bold; /* Gras pour les labels */
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px; /* Espacement interne */
+    border: 1px solid #ddd; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    margin-bottom: 15px; /* Espace entre les champs */
+    font-size: 16px; /* Taille du texte */
+}
+
+.contact-form button {
+    background-color: #28a745; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    border: none; /* Pas de bordure */
+    padding: 10px 20px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer sur hover */
+    font-size: 18px; /* Taille du texte du bouton */
+}
+
+.contact-form button:hover {
+    background-color: #218838; /* Couleur au survol */
+}
+
+/* Styles pour les informations de contact */
+.contact-info {
+    margin-top: 30px; /* Espace au-dessus des informations */
+    text-align: center; /* Centrer le texte */
+}
+
+.contact-info p {
+    margin: 5px 0; /* Espace vertical entre les paragraphes */
+    font-size: 16px; /* Taille de texte */
+    color: #555; /* Couleur du texte */
+}
+
+.contact-info a {
+    color: #007bff; /* Couleur des liens */
+    text-decoration: none; /* Pas de soulignement */
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Souligner au survol */
+}
+#Contacts {
+    background-color: #f9f9f9; /* Couleur de fond */
+    padding: 30px 20px; /* Espacement interne */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin: 40px 20px; /* Marge autour */
+}
+
+#Contacts h2 {
+    text-align: center; /* Centrer le titre */
+    font-size: 36px; /* Taille du titre */
+    margin-bottom: 20px; /* Espace sous le titre */
+    color: #007bff; /* Couleur du titre */
+    text-transform: uppercase; /* Mettre en majuscules */
+}
+
+.Contact-info {
+    max-width: 600px; /* Largeur maximum */
+    margin: auto; /* Centrer le contenu */
+    text-align: left; /* Alignement à gauche du texte */
+}
+
+.Contact-info p {
+    font-size: 18px; /* Taille de texte */
+    color: #555; /* Couleur du texte */
+    margin-bottom: 20px; /* Espace sous le paragraphe */
+}
+
+.Contact-info ul {
+    list-style-type: none; /* Pas de puces */
+    padding: 0; /* Pas d'espacement interne */
+}
+
+.Contact-info li {
+    margin-bottom: 15px; /* Espace entre les éléments de la liste */
+    font-size: 18px; /* Taille de texte */
+}
+
+.Contact-info a {
+    color: #007bff; /* Couleur des liens */
+    text-decoration: none; /* Pas de soulignement */
+    font-weight: bold; /* Gras pour les liens */
+}
+
+.Contact-info a:hover {
+    text-decoration: underline; /* Souligner au survol */
+}
+#nos-fonctionnalites {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+#nos-fonctionnalites h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+.fonctionnalite {
+    margin-bottom: 30px;
+}
+.fonctionnalite h3 {
+    color: #2c3e50;
+    margin-bottom: px;
+}
+#demande-priere-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+#demande-priere-form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#demande-priere-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+#demande-priere-form button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#demande-priere-form button:hover {
+    background-color: #2980b9;
+}
+.boite-prieres {
+    max-height: 50px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 10px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+.priere {
+    margin-bottom: 50px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+.priere:last-child {
+    border-bottom: none;
+    margin-bottom: 10;
+    padding-bottom: 15;
+}
+.priere .auteur {
+    font-weight: bold;
+    color: #34495e;
+}
+#notifications-priere-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+#notifications-priere-form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+#notifications-priere-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+#notifications-priere-form button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#notifications-priere-form button:hover {
+    background-color: #349;
+}
+  .priere-box {
+            margin: 10px 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 20px;
+            text-align: center;
+}
+        .priere-box a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .priere-box a:hover {
+            color: #007B;
+        }
+
+        .sous-section {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            display: none; /* Cacher les sous-sections par défaut */
+        }
+        :target {
+            display: block;
+            background-color: #cfe2ff;
+            border: 1px solid #007BFF;
+        }
+        /* Structure de base pour le corps et le conteneur principal */
+body, html {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
-
-/* Style du header */
 header {
-    background: linear-gradient(90deg, #FF4500, #FF8C00); /* Effet de feu en dégradé */
+    background-color: #8B0000;
     color: white;
     padding: 20px;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
-
-/* Boutons principaux */
-.main-btn {
-    background: linear-gradient(90deg, #FF4500, #FF8C00); /* Effet flamme */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 10px;
+}
+nav ul li a {
     color: white;
-    border: none;
-    font-size: 1.2em;
-    padding: 12px;
-    margin: 10px;
-    cursor: pointer;
-    width: 80%;
-    max-width: 400px;
-    border-radius: 5px;
-    transition: 0.3s;
+    text-decoration: none;
     font-weight: bold;
 }
-
-.main-btn:hover {
-    background: #FF5722; /* Rouge plus intense au survol */
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
-
-/* Sous-boutons */
-.sub-btn {
-    background-color: #FFD700; /* Or lumineux */
-    color: #333;
-    border: none;
-    font-size: 1em;
+section#accueil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    background-image: url('votre-image-de-fond.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+}
+section#accueil div {
+    z-index: ;
+}
+section.prieres {
+    background-color: #f9f9f9;
     padding: 10px;
-    margin: 5px;
-    cursor: pointer;
-    width: 70%;
-    max-width: 350px;
-    border-radius: 5px;
-    transition: 0.3s;
-    font-weight: bold;
+}
+/* Conteneur principal pour les boîtes de prière */
+.prieres-container {
+    display: flex; 40
+    flex-wrap: wrap; /* Permet aux boîtes de passer à la ligne suivante si l'espace est insuffisant */
+    gap: 50px; /* Espace entre les boîtes */
+.priere-box {
+    flex: 1 1 calc(20% - 10px);
+    box-sizing: border-box;
+    background-color:  #0095B7; /* Exemple de couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px; /* Espacement interne */
+    border-radius: 10px; /* Coins arrondis */
+    font-size: 1em; /* Taille du texte */
+    margin-bottom: 10px; /* Espace en bas de chaque boîte */
+}
+/* Style pour les petits écrans */
+@media (max-width: 1024px) {
+    .priere-box {
+        flex: 1 1 calc(20% - 10px); /* Deux boîtes par ligne sur les écrans moyens */
+    }
 }
 
-.sub-btn:hover {
-    background-color: #FFA500; /* Orange profond */
+@media (max-width: 768px) {
+    .priere-box {
+        flex: 1 1 20%; /* Une boîte par ligne sur les petits écrans */
+}
+footer {
+    background-color: #8B0000;
     color: white;
-}
-
-/* Contenu des sous-sections */
-.hidden {
-    display: none;
-    margin: 10px;
-    padding: 15px;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-/* Sections avec différentes couleurs inspirées du feu */
-#verset {
-    background-color: #FFD700; /* Jaune doré éclatant */
-    color: #333;
-}
-
-#explication {
-    background-color: #FF8C00; /* Orange flamme */
-    color: white;
-}
-
-#application {
-    background-color: #FF4500; /* Rouge feu intense */
-    color: white;
-}
-
-#priere {
-    background-color: #E65100; /* Orange brûlant */
-    color: white;
-}
-
-/* Style des sections de prières */
-#requetes div {
-    background-color: #D84315; /* Rouge profond pour l’intensité */
-    color: white;
-}
-
-#declarations div {
-    background-color: #D84315; /* Or spirituel */
-    color: #333;
-}
-
-/* Ajout d'un effet d'ombre */
-.main-btn, .sub-btn {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.hidden p {
-    font-size: 1.1em;
-    font-weight: bold;
-}
-/* Style général pour la section */
-#verset {
-    background: linear-gradient(135deg, #ff9800, #ff5722); /* Dégradé feu 🔥 */
-    color: #fff; /* Texte en blanc */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    margin: 20px 0;
-}
-
-/* Style du verset biblique */
-#verset p {
-    font-family: 'Georgia', serif;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 1.6;
-    text-align: center;
-}
-
-/* Style du verset (texte en or pour symboliser la richesse de la Parole) */
-#verset strong {
-    color: #ffd700; /* Or brillant ✨ */
-    font-size: 22px;
-}
-
-/* Icône de livre 📖 et référence du verset */
-#verset em {
-    font-family: 'Courier New', monospace;
-    font-size: 16px;
-    color: #c7f0ff; /* Bleu ciel doux */
-    display: block;
-    margin-top: 10px;
-}
-
-/* Bloc de mise en avant du texte */
-#verset blockquote {
-    font-family: 'Lucida Handwriting', cursive;
-    font-size: 20px;
-    color: #ffeb3b; /* Jaune éclatant pour attirer l'attention */
-    border-left: 4px solid #ffcc00; /* Bordure gauche dorée */
-    padding-left: 15px;
-    margin: 15px 0;
-}
-
-/* Animation subtile au survol */
-#verset:hover {
-    transform: scale(1.02);
-    transition: 0.3s ease-in-out;
-}
-
-/* Ajout d'une lueur autour du texte */
-#verset p:hover {
-    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8); /* Lueur dorée */
-}
-/* Style général pour l'explication */
-#explication {
-    background: linear-gradient(135deg, #ff5722, #ff9800); /* Dégradé orange-feu */
-    color: #fff; /* Texte en blanc pour contraster avec le fond */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-    margin: 20px 0;
-}
-
-/* Titre principal de l'explication */
-#explication h3 {
-    font-family: 'Georgia', serif;
-    font-size: 24px;
-    color: #ffd700; /* Jaune or pour attirer l'attention */
-    text-align: center;
-    margin-bottom: 15px;
-}
-#explication b {font-family:'Normal ';
-     font-size: 24px;
-     font-weight: Normal; bold;
-    color: #FF0000;
-}
-/* Style de la section de lecture */
-#lecture {
-    margin-top: 10px;
-    background: rgba(255, 255, 255, 0.1); /* Légère transparence pour le fond */
-    padding: 15px;
-    border-left: 4px solid #ffeb3b; /* Bordure jaune éclatante */
-}
-
-/* Style des éléments de la liste d'explication */
-#explication ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#explication li {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #ffffff;
-    margin-bottom: 12px;
-}
-
-/* Mise en valeur des titres dans la liste */
-#explication li strong {
-    font-family: 'Courier New', monospace;
-    font-size: 20px;
-    color: #ffeb3b; /* Jaune doré pour souligner l'importance des phrases */
-}
-
-/* Effet au survol pour les éléments de la liste */
-#explication li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-/* Mise en valeur de l'explication avec une bordure */
-#explication p {
-    font-family: 'Georgia', serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
-    text-align: center;
-    margin-top: 20px;
-    line-height: 1.8;
-}
-
-/* Style pour une animation subtile sur la section */
-#explication:hover {
-    transform: scale(1.02);
-    transition: 0.3s ease-in-out;
-}
-
-/* Style des éléments de la liste d'application */
-#application ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#application li {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #ffffff;
-    margin-bottom: 12px;
-}
-#application b {font-family:'Normal ';
-     font-size: 22px;
-     font-weight: Normal; bold;
-    color: #FFeb3b;
-}
-/* Mise en valeur des titres dans la liste */
-#application li strong {
-    font-family: 'Courier New', monospace;
-    font-size: 20px;
-    color: #008; /* Jaune doré pour souligner l'importance des phrases */
-}
-
-/* Effet au survol pour les éléments de la liste */
-#application li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-/* Mise en valeur de l'application avec une bordure */
-#application p {
-    font-family: 'Georgia', serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
-    text-align: center;
-    margin-top: 20px;
-    line-height: 1.8;
-}
-
-/* Style pour une animation subtile sur la section */
-#application:hover {
-    transform: scale(1.02);
-    transition: 0.3s ease-in-out;
-}
-/* Style des éléments de la liste d'application */
-#perso ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#perso li {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #ffffff;
-    margin-bottom: 12px;
-}
-
-/* Mise en valeur des titres dans la liste */
-#perso li strong {
-    font-family: 'Courier New', monospace;
-    font-size: 20px;
-    color: #008; /* Jaune doré pour souligner l'importance des phrases */
-}
-
-/* Effet au survol pour les éléments de la liste */
-#perso li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-/* Mise en valeur de l'application avec une bordure */
-#perso p {
-    font-family: 'Georgia', serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
-    text-align: center;
-    margin-top: 20px;
-    line-height: 1.8;
-}
-
-/* Style pour une animation subtile sur la section */
-#perso:hover {
-    transform: scale(1.02);
-    transition: 0.3s ease-in-out;
-}
-/* Style des éléments de la liste d'eglise */
-#eglise ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#eglise li {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #ffffff;
-    margin-bottom: 12px;
-}
-
-/* Mise en valeur des titres dans la liste */
-#eglise li strong {
-    font-family: 'Courier New', monospace;
-    font-size: 20px;
-    color: #008; /* Jaune doré pour souligner l'importance des phrases */
-}
-
-/* Effet au survol pour les éléments de la liste */
-#eglise li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-/* Mise en valeur de l'application avec une bordure */
-#eglise p {
-    font-family: 'Georgia', serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
-    text-align: center;
-    margin-top: 20px;
-    line-height: 1.8;
-}
-
-/* Style pour une animation subtile sur la section */
-#eglise:hover {
-    transform: scale(1.02);
-    transition: 0.3s ease-in-out;
-}
-/* Style des éléments de la liste de nation */
-#nation ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#nation li {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #ffffff;
-    margin-bottom: 12px;
-}
-
-/* Mise en valeur des titres dans la liste */
-#nation li strong {
-    font-family: 'Courier New', monospace;
-    font-size: 20px;
-    color: #008; /* Jaune doré pour souligner l'importance des phrases */
-}
-
-/* Effet au survol pour les éléments de la liste */
-#nation li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-/* Mise en valeur de l'application avec une bordure */
-#nation p {
-    font-family: 'Georgia', serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
-    text-align: center;
-    margin-top: 20px;
-    line-height: 1.8;
-}
-
-/* Style pour une animation subtile sur la section */
-#nation:hover {
-    transform: scale(1.02);
-    transition: 0.3s ease-in-out;
-}
-/* Style des éléments de la liste de special */
-#speciale ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#speciale li {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #ffffff;
-    margin-bottom: 12px;
-}
-
-/* Mise en valeur des titres dans la liste */
-#speciale li strong {
-    font-family: 'Courier New', monospace;
-    font-size: 20px;
-    color: #008; /* Jaune doré pour souligner l'importance des phrases */
-}
-
-/* Effet au survol pour les éléments de la liste */
-#speciale li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-/* Mise en valeur de l'application avec une bordure */
-#speciale p {
-    font-family: 'Georgia', serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
-    text-align: center;
-    margin-top: 20px;
-    line-height: 1.8;
-}
-
-/* Style pour une animation subtile sur la section */
-#speciale:hover {
-    transform: scale(1.02);
-    transition: 0.3s ease-in-out;
-}
-/* Style des éléments de la liste de special */
-#prosp ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#prosp li {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #ffffff;
-    margin-bottom: 12px;
-}
-
-/* Mise en valeur des titres dans la liste */
-#prosp li strong {
-    font-family: 'Courier New', monospace;
-    font-size: 20px;
-    color: #ffeb3b; /* Jaune doré pour souligner l'importance des phrases */
-}
-
-/* Effet au survol pour les éléments de la liste */
-#prosp li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-/* Mise en valeur de l'application avec une bordure */
-#prosp p {
-    font-family: 'Georgia', serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
-    text-align: center;
-    margin-top: 20px;
-    line-height: 1.8;
-}
-
-/* Style pour une animation subtile sur la section */
-#prosp:hover {
-    transform: scale(1.02);
-    transition: 0.3s ease-in-out;
-}
-/* Style des éléments de la liste de sante */
-#sante ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#sante li {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #ffffff;
-    margin-bottom: 12px;
-}
-
-/* Mise en valeur des titres dans la liste */
-#sante li strong {
-    font-family: 'Courier New', monospace;
-    font-size: 20px;
-    color: #ffeb3b; /* Jaune doré pour souligner l'importance des phrases */
-}
-
-/* Effet au survol pour les éléments de la liste */
-#sante li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-/* Mise en valeur de l'application avec une bordure */
-#sante p {
-    font-family: 'Georgia', serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
-    text-align: center;
-    margin-top: 20px;
-    line-height: 1.8;
-}
-
-/* Style pour une animation subtile sur la section */
-#sante:hover {
-    transform: scale(1.02);
-    transition: 0.3s ease-in-out;
-}
-/* Style des éléments de la liste de special */
-#sante ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#depr li {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #ffffff;
-    margin-bottom: 12px;
-}
-
-/* Mise en valeur des titres dans la liste */
-#depr li strong {
-    font-family: 'Courier New', monospace;
-    font-size: 20px;
-    color: #ffeb3b; /* Jaune doré pour souligner l'importance des phrases */
-}
-
-/* Effet au survol pour les éléments de la liste */
-#depr li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-/* Mise en valeur de l'application avec une bordure */
-#depr p {
-    font-family: 'Georgia', serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
-    text-align: center;
-    margin-top: 20px;
-    line-height: 1.8;
-}
-
-/* Style pour une animation subtile sur la section */
-#depr :hover {
-    transform: scale(1.02);
-    transition: 0.3s ease-in-out;
-}
-/* Style des éléments de la liste de special */
-#depr ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#depr li {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #ffffff;
-    margin-bottom: 12px;
-}
-
-/* Mise en valeur des titres dans la liste */
-#depr li strong {
-    font-family: 'Courier New', monospace;
-    font-size: 20px;
-    color: #ffeb3b; /* Jaune doré pour souligner l'importance des phrases */
-}
-
-/* Effet au survol pour les éléments de la liste */
-#depr li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transition: background-color 0.3s ease;
-}
-
-/* Mise en valeur de l'application avec une bordure */
-#depr p {
-    font-family: 'Georgia', serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #c7f0ff; /* Bleu ciel pour adoucir la lecture */
-    text-align: center;
-    margin-top: 20px;
-    line-height: 1.8;
-}
-
-/* Style pour une animation subtile sur la section */
-#depr:hover {
-    transform: scale(1.02);
-    transition: 0.3s ease-in-out;
-}
-/* Style pour la section Audio */
-#audio-section {
-    background: linear-gradient(135deg, #f39c12, #f1c40f); /* Dégradé doré */
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
-    color: #fff; /* Texte blanc pour contraster avec le fond */
-    text-align: center;
-}
-
-/* Titre de la section Audio */
-#audio-section h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 28px;
-    color: #fff;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    letter-spacing: 2px;
-}
-
-/* Style pour le lecteur audio */
-#audio-section audio {
-    width: 100%;
-    border-radius: 80px;
-    outline: none;
-    border: none;
-}
-
-/* Style pour le sélecteur de vitesse */
-#audio-section select {
-    background-color: #fff;
-    color: #333;
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: none;
-}
-
-/* Survol de la section Audio */
-#audio-section:hover {
-    background: linear-gradient(135deg, #f1c40f, #f39c12); /* Inverser le dégradé au survol */
-    cursor: pointer;
-}
-/* Style pour les titres */
-h3 {
-  color: #003366; /* Couleur sombre pour un effet élégant */
-  font-family: 'Arial', sans-serif;
-  font-size: 1.0em;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Style pour les éléments de liste */
-ul {
-  list-style-type: none; /* Supprime les puces par défaut */
-  padding-left: 0;
-}
-
-ul li {
-  font-family: 'Verdana', sans-serif;
-  font-size: 1.2em;
-  color: #333333; /* Couleur de texte gris foncé */
-  margin-bottom: 15px; /* Espacement entre les éléments */
-  line-height: 1.6;
-  padding-left: 20px;
-  position: relative;
-}
-
-/* Ajouter une icône devant chaque élément */
-ul li::before {
-  content: "\2022"; /* Puce personnalisée */
-  color: #ff4500; /* Couleur orangée pour les puces */
-  font-size: 1.5em;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-/* Style pour le texte fort (forte emphase) */
-ul li strong {
-  color: #0055A5; /* Couleur bleue */
-  font-weight: bold;
-  font-size: 0.9em;
-}
-
-/* Ajouter un fond et bordure douce à chaque élément pour le mettre en valeur */
-ul li:hover {
-  background-color: #f4f4f4;
-  border-left: 4px solid #0055A5; /* Bordure gauche colorée */
-  padding-left: 16px;
-  cursor: pointer;
-}
-
-/* Style de fond de section */
-div {
-  background-color: #FFF3E0; /* Fond bleu clair */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-}
-/* Style général */
-div {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.8;
-    color: #333;
-}
-
-/* Mise en valeur des titres */
-h3, h4 {
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #5a2d82;
-    border-bottom: 2px solid #5a2d82;
-    padding-bottom: 5px;
-    margin-top: 20px;
-}
-
-/* Mise en valeur des versets bibliques */
-p em {
-    display: block;
-    font-style: italic;
-    font-weight: bold;
-    color: #2d5a82;
-    background-color: #f4f8ff;
     padding: 10px;
-    border-left: 4px solid #2d5a82;
-    margin: 10px 0;
-}
-
-/* Mise en évidence des points clés */
-strong {
-    color: #d12d2d;
-}
-
-/* Style des paragraphes */
-p {
-    font-size: 16px;
-    text-align: justify;
-}
-
-/* Espacement et mise en forme des sections */
-p:last-child {
-    font-weight: bold;
-    font-size: 18px;
-    color: #5a2d82;
     text-align: center;
 }
-
-/* Ajout d'un effet subtil aux sous-titres */
-h4 {
-    font-size: 18px;
-    background: linear-gradient(to right, #f4f8ff, #d1e8ff);
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-/* Bordure et mise en avant de l'encouragement final */
-p strong:last-child {
-    display: block;
-    font-size: 20px;
-    text-align: center;
-    padding: 10px;
-    background-color: #ffe5e5;
-    border: 2px solid #d12d2d;
-    border-radius: 5px;
-}
+    </style>

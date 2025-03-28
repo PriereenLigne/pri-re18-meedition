@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prière en Ligne</title>
+    <link rel="stylesheet" href="mise.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo de Prière en Ligne" class="logo">
+        </div>
+        <h1>Prière en Ligne</h1>
+        <nav>
+            <ul>       
+                <li><a href="#accueil">Accueil</a></li> 
+                <li><a href="#boites-priere">Prières</a></li>
+                <li><a href="a-propos.html">À Propos</a></li>
+                <li><a href="#Contacts">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <!-- Section Accueil -->
+        <section id="accueil" style="position: relative; background-image: url('votre-image-de-fond.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; justify-content: center; align-items: center;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
+            <div style="position: relative; z-index: 2; text-align: center; color: white; padding: 20px;">
+                <h1 style="font-size: 3em; margin-bottom: 20px;">Bienvenue sur Prière en Ligne</h1>
+                <p style="font-size: 1.5em; margin-bottom: 30px;">Un espace dédié à la prière, au partage et à la communion avec Dieu.</p>
+                <a href="#boites-priere" class="cta-button" style="background-color: #FFD700; color: #8B0000; padding: 15px 30px; font-size: 1.2em; text-decoration: none; border-radius: 5px;">Soumettre une demande de prière</a>
+            </div>
+        </section>
+
+        <!-- Section Prières -->
+        <section class="prieres">
+            <h2>Prières</h2>
+
+            <!-- Barre de recherche -->
+            <section id="search-section">
+                <input type="text" id="search-bar" placeholder="Rechercher une prière...">
+                <button type="button" onclick="rechercherPriere()">Rechercher</button>
+            </section>
+
+            <!-- Boîtes de prières -->
+            <section id="boites-priere">
+                <h2>50 Boîtes de Prière</h2>
+                <div class="priere-box"><a href="#boite-1">Prière pour la conversion</a></div>
+                <div class="priere-box"><a href="#boite-2">Prière pour la plénitude du Saint-Esprit</a></div>
+            </section>
+
+            <!-- Contenu des prières -->
+            <section id="boite-1" class="sous-section">
+                <h3>Prière pour votre conversion</h3>
+                <p>1. Seigneur Jésus, ouvre mon cœur et mon esprit pour recevoir Ta vérité et Ta grâce.</p>
+            </section>
+
+            <section id="boite-2" class="sous-section">
+                <h3>Prière pour la plénitude du Saint-Esprit</h3>
+                <p>1. Seigneur, remplis-moi de ton Saint-Esprit et de ton feu.</p>
+                <p>2. Père céleste, je prie pour une nouvelle effusion du Saint-Esprit dans ma vie.</p>
+            </section>
+
+            <section id="boite-3" class="sous-section">
+                <h3>Décharger son fardeau</h3>
+                <p>1. Seigneur Jésus, prends tous mes soucis et mes angoisses, et accorde-moi Ta paix.</p>
+            </section>
+        </section>
+
+        <!-- Section Fonctionnalités -->
+        <section class="fonctionnalites">
+            <h2>Nos Fonctionnalités</h2>
+
+            <!-- Voir les prières des autres -->
+            <div class="fonctionnalite">
+                <h3>Voir les prières des autres</h3>
+                <div class="boite-prieres">
+                    <div class="priere"><p class="auteur">Anonyme :</p><p>Que Dieu m'aide dans mes études.</p></div>
+                    <div class="priere"><p class="auteur">Jean Dupont :</p><p>Priez pour ma guérison.</p></div>
+                </div>
+            </div>
+
+            <!-- Recevoir des notifications -->
+            <div class="fonctionnalite">
+                <h3>Recevoir des notifications de prière</h3>
+                <form id="notifications-priere-form">
+                    <label for="email">Entrez votre e-mail :</label>
+                    <input type="email" id="email" name="email" placeholder="exemple@domaine.com" required>
+                    <button type="submit">S'inscrire</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <form class="contact-form">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+
+            <div class="contact-info">
+                <h3>Informations de contact</h3>
+                <p>Téléphone : +229 40194151</p>
+                <p>Email : <a href="mailto:enlignepriere@gmail.com">enlignepriere@gmail.com</a></p>
+                <p>Adresse : Cotonou, Bénin</p>
+            </div>
+        </section>
+
+        <!-- Section Réseaux Sociaux -->
+        <section id="Contacts">
+            <h2>Contacts</h2>
+            <div class="Contact-info">
+                <h3>Discutez avec nous ou rejoignez notre forum WhatsApp :</h3>
+                <ul>
+                    <li>Email : <a href="mailto:enlignepriere@gmail.com">Cliquer pour Email</a></li>
+                    <li>WhatsApp : <a href="https://wa.me/+22940194151" target="_blank">Cliquez ici pour discuter</a></li>
+                    <li>Forum WhatsApp : <a href="https://chat.whatsapp.com/JnEG13M6Zpk2LB85yLtRE8" target="_blank">Rejoindre le forum</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Prière en Ligne. Tous droits réservés.</p>
+    </footer>
+
+    <script src="mis.js" defer></script>
+</body>
+</html>
