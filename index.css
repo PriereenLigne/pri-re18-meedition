@@ -18,30 +18,20 @@ body {
     align-items: center;
     justify-content: center;
 }
-/* Ajustement du titre */
-.header-container {
+
+/* En-tête */
+header {
     width: 100%;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 100px 0;
+    padding: 70px;
     background: rgba(0, 0, 0, 0.6);
-    border-bottom: 15px solid #fff;
+    border-bottom: 20px solid #fff;
 }
 
-/* Assurer que le h1 occupe toute la largeur */
 .header-container h1 {
-    width: 100%;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 2rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 165, 0, 0.9);
 }
-
 
 /* Section d'introduction */
 .intro {
@@ -81,7 +71,7 @@ nav ul {
 }
 
 nav li {
-    flex: 1 1 20%;
+    flex: 1 1 30%;
     max-width: 200px;
     min-width: 150px;
     text-align: center;
@@ -143,4 +133,4 @@ footer p {
         width: 100%;
         max-width: none;
     }
-}
+    }
