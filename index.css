@@ -20,7 +20,7 @@ body {
 }
 /* Ajustement du titre */
 .header-container {
-    width: 105%;
+    width: 100%;
     text-align: center;
     display: flex;100
     justify-content: center;
@@ -32,7 +32,7 @@ body {
 
 /* Assurer que le h1 occupe toute la largeur */
 .header-container h1 {
-    width: 100%;
+    width: 70%;
     font-size: 2.0rem;
     text-transform: uppercase;
     text-align: center;
