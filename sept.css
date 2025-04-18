@@ -1,0 +1,1933 @@
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background: linear-gradient(-45deg, #ff9a00, #ff1e00, #ff6f00, #ff3c00);
+  background-size: 400% 400%;
+  animation: feuAnime 12s ease-in-out infinite;
+  color: #fff;
+}
+
+@keyframes feuAnime {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Header stylisé */
+header.animated-header {
+  position: relative;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  max-width: 90%;
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 0 0 10px #ffd700, 0 0 20px #ffa500;
+}
+
+h1 span {
+  color: #ffd700;
+  text-shadow: 0 0 15px #ff8c00;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  color: #fff8dc;
+}
+
+/* Vapeur */
+.smoke {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 20%, transparent 70%);
+  border-radius: 50%;
+  animation: smokeRise 6s infinite ease-in-out;
+  filter: blur(8px);
+  z-index: 1;
+  opacity: 0.7;
+  transform: translateX(-50%);
+}
+
+@keyframes smokeRise {
+  0% {
+    transform: translateX(-50%) translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-150px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Feu en bas */
+.fire {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: radial-gradient(circle at bottom, rgba(255,140,0,0.9), transparent 70%);
+  animation: fireFlicker 0.3s infinite alternate;
+  z-index: 1;
+}
+
+@keyframes fireFlicker {
+  from { opacity: 0.7; transform: scaleY(1); }
+  to { opacity: 1; transform: scaleY(1.05); }
+}
+
+/* Étincelles (sparks) */
+.sparks {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow:
+    0 0 10px rgba(255, 215, 0, 0.8),
+    5px -10px 15px rgba(255, 140, 0, 0.8),
+    -10px -20px 20px rgba(255, 69, 0, 0.8),
+    15px -30px 25px rgba(255, 140, 0, 0.8),
+    -20px -40px 30px rgba(255, 215, 0, 0.8);
+  animation: sparkle 1.5s infinite ease-in-out alternate;
+  z-index: 3;
+}
+
+@keyframes sparkle {
+  from {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateX(-50%) translateY(-80px) scale(1.5);
+    opacity: 0;
+  }
+}
+.animated-header {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  animation: tiltView 20s infinite linear;
+}
+
+@keyframes tiltView {
+  0% { transform: rotateX(0deg) rotateY(0deg); }
+  50% { transform: rotateX(4deg) rotateY(-4deg); }
+  100% { transform: rotateX(0deg) rotateY(0deg); }
+}
+
+.overlay {
+  transform: rotateX(2deg) rotateY(2deg);
+}
+/* Conteneur principal des jours */
+#programme-container {
+  width: 350px;          /* Largeur du conteneur */
+  height: auto;          /* Hauteur ajustable selon le contenu */
+  padding: 10px;         /* Espace intérieur */
+  font-size: 16px;       /* Taille de la police */
+  padding: 8px;
+}
+
+/* Style de chaque jour */
+.jour {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Titre des jours */
+.jour-header {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #b22222;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+/* Sections matin/soir */
+.section-header {
+  width: 100%; /* ou une largeur fixe comme 600px */
+  margin: 0 auto;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #d35400;
+  background-color: #fff3e0;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.section-content {
+  margin-top: 10px;
+  padding-left: 15px;
+  display: none; /* Masque tout par défaut */
+}
+
+/* Sous-sections (versets, exhortations, requêtes, proclamations) */
+.sub-section {
+  font-weight: bold;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #ffe4b5;
+  padding: 12px;
+  margin-top: 10px;
+  border-left: 5px solid #ff4500;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0px
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  font-size: 0.9em;
+}
+
+/* Contenu audio + texte */
+.sub-content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 10px auto;
+  padding: 15px;
+  background-color: rgba(255, 255, 240, 0.95);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 69, 0, 0.5);
+  text-align: center;
+  display: none;
+}
+
+/* Style des titres secondaires (h3 dans les sections) */
+h3 {
+  color: #b22222;
+  margin-top: 10px;
+}
+
+/* Audio player stylisé */
+audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Déclarations spéciales */
+.declaration-style {
+  background-color: #ffeeba;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #8b0000;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7); /* Fond sombre semi-transparent */
+  color: #ffcc99; /* Texte clair et chaleureux, facile à lire sur fond sombre */
+  margin-top: 40px;
+  font-size: 1em;
+  border-top: 2px solid #ff6f00; /* Petite touche feu pour rester dans le thème */
+}
+
+
+/* Style global pour les boîtes des sections */
+.section-header, .sub-section {
+  .container {
+  width: 50%; /* ou une largeur fixe comme 600px */
+  margin: 0 auto;
+  max-width: 1000px;
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  color: black;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+/* Changer la couleur au survol */
+.section-header:hover, .sub-section:hover {
+  width: 110%;
+  max-width: 1000px;
+  background: linear-gradient(to right, #ff5e5b, #ffeeba);
+}
+
+/* Style pour les boîtes de contenu audio */
+.sub-content audio {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Effet d'ombre sur la boîte de contenu lorsqu'elle est ouverte */
+.sub-content.show {
+  box-shadow: 0 20px 30px rgba(255, 69, 0, 0.3);
+  border-color: rgba(255, 69, 0, 0.7);
+}
+
+/* Style pour la section Exhortation */
+
+
+/* Titre principal de l'exhortation */
+.exhortation-title {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  color: red;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Sous-titres des sections */
+.exhortation-subtitle {
+  font-size: 1em;
+  font-weight: bold;
+  color: blue;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #2f4f4f;
+  padding-bottom: 5px;
+  p {
+  line-height: 1.5;
+}
+}
+
+/* Bloc de contenu sous chaque sous-titre */
+.exhortation-block {
+  margin-bottom: 30px;
+}
+
+/* Action proposée : Liste d'actions */
+.exhortation-action {
+  background-color: #e7f7f2;
+  border-left: 4px solid #2f4f4f;
+  padding: 15px;
+  margin-top: 20px;
+  p {
+  line-height: 1.5;
+}
+}
+
+.exhortation-action h3 {
+  font-size: 1em;
+  font-weight: bold;
+  color: #008;
+  margin-bottom: 10px;
+  p {
+  line-height: 1.5;
+}
+}
+
+.exhortation-action ul {
+  list-style-type: disc;
+  margin-left: 15px;
+  p {
+  line-height: 1.5;
+}
+}
+
+.exhortation-action li {
+  font-size: 0.8em;
+  color: #555;
+  line-height: 1.5;
+  p {
+  line-height: 1.5;
+}
+}
+
+/* Paragraphe général pour l'exhortation */
+.exhortation p {
+  font-size: 1em;
+  color: #444;
+  line-height: 0.9;
+  margin-bottom: 20px;
+  p {
+  line-height: 1.5;
+}
+}
+
+/* Conclusion */
+.exhortation-conclusion {
+  margin-top: 20px;
+  font-size: 1,1em;
+  font-weight: bold;
+  text-align: center;
+  color: #2f4f4f;
+  padding: 10px;
+  background-color: #e7f7f2;
+  border-radius: 10px;
+  p {
+  line-height: 1.5;
+}
+}
+
+.requete-section {
+  padding: 2rem;
+  background-color: #fdfdfd;
+  border-left: 6px solid #d4af37; /* Or royal */
+  margin: 2rem 0;
+}
+
+.requete-titre {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.requete-liste {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  text-align: left;
+  line-height: 1.7;
+  color: #333;
+}
+
+.requete-liste li {
+  margin-bottom: 0.75rem;
+}
+.proclamation-section {
+  background-color: #f7f9fc;
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 40px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.07);
+}
+
+.proclamation-title {
+  font-size: 24px;
+  color: #2b3a67;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.proclamation-list {
+  list-style-position: inside;
+  padding-left: 0;
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+}
+
+.proclamation-list li {
+  margin-bottom: 10px;
+}
+
+/* Section Matin - Exhortation */
+.exhortation-matin {
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #fdfaf6;
+  border-left: 6px solid #d4af37;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.exhortation-title {
+  font-size: 1.8em;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.exhortation-verse {
+  font-style: italic;
+  color: #7f8c8d;
+  margin-bottom: 15px;
+}
+
+.exhortation-text {
+  font-size: 1.1em;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+/* Style pour la section de requêtes de prière */
+.prayer-requests {
+  background-color: #f9f9ff;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-left: 4px solid #4a90e2;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  font-size: 1.6rem;
+  color: #2d2d5a;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.prayer-list {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  color: #333;
+}
+
+.prayer-list li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Style pour l'exhortation du soir */
+.exhortation-soir {
+  background-color: #f9f9fc;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.titre-section {
+  font-size: 1.8rem;
+  color: #2d2f80;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-left: 4px solid #2d2f80;
+  padding-left: 12px;
+}
+
+.verset {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.highlight {
+  background-color: #fff3cd;
+  padding: 10px;
+  border-left: 5px solid #ffc107;
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+.references {
+  margin-left: 20px;
+  list-style-type: square;
+  color: #444;
+}
+
+.activation-list {
+  list-style-type: decimal;
+  padding-left: 25px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.activation-list li {
+  margin-bottom: 8px;
+}
+.section-prieres-combat {
+  padding: 2rem;
+  background-color: #fdf9f3;
+  border-left: 6px solid #c08552;
+  border-radius: 8px;
+  margin: 2rem 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titre-prieres-combat {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #8b5e3c;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.liste-prieres-combat {
+  list-style-position: inside;
+  counter-reset: prieres;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.liste-prieres-combat li {
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #3b2f2f;
+  position: relative;
+}
+
+.liste-prieres-combat li::before {
+  counter-increment: prieres;
+  content: counter(prieres) ". ";
+  font-weight: bold;
+  color: #a56634;
+  position: absolute;
+  left: -1.8rem;
+}
+
+/* SECTION: Proclamations de succès corrigé */
+.success-declarations {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: #f9f9ff;
+  border-left: 5px solid #6a1b9a;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow-x: hidden;
+}
+
+.success-declarations .section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4a148c;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.success-declarations .declarations-list {
+  list-style: decimal inside;
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.6;
+  padding-left: 0;
+  margin: 0;
+}
+
+.success-declarations .declarations-list li {
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s ease;
+  word-wrap: break-word;
+}
+
+.success-declarations .declarations-list li:hover {
+  background-color: #ede7f6;
+  border-radius: 5px;
+  padding-left: 0.5rem;
+}
+
+/* Stylisation des paragraphes avec versets et objectifs */
+p {
+  font-size: 1.2em; /* Augmente légèrement la taille du texte */
+  line-height: 1.6; /* Améliore l'espacement des lignes */
+  margin-bottom: 15px; /* Espace entre les paragraphes */
+  color: #2c2c2c; /* Couleur de texte pour une lecture facile */
+}
+
+/* Mise en valeur des éléments en gras (verset et objectif) */
+strong {
+  color: #b22222; /* Rouge sombre pour faire ressortir le texte important */
+  font-weight: bold; /* S'assure que le texte en gras ressort davantage */
+}
+
+/* Section spécifique au verset */
+p strong:first-of-type {
+  font-size: 1.4em; /* Taille plus grande pour le verset */
+  text-align: center; /* Centre le verset */
+  margin-bottom: 20px; /* Espacement inférieur pour le verset */
+}
+
+/* Section spécifique à l'objectif */
+p strong:last-of-type {
+  font-size: 1.2em; /* Taille un peu plus petite pour l'objectif */
+  color: #d35400; /* Couleur orange pour l'objectif */
+  font-style: italic; /* Met l'objectif en italique pour le distinguer */
+  margin-top: 10px; /* Espacement au-dessus de l'objectif */
+}
+/* Style pour les sections d’exhortation */
+.exhortation-matinale {
+  background-color: #f9f9f9;
+  border-left: 6px solid #4CAF50;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.exhortation-matinale h2 {
+  font-size: 1.8rem;
+  color: #2e7d32;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.exhortation-matinale p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  text-align: justify;
+  color: #333;
+}
+
+.exhortation-matinale p strong {
+  color: #1b5e20;
+}
+
+.retablissement-section {
+  background-color: #f4f8ff;
+  padding: 20px;
+  margin: 30px 0;
+  border-left: 6px solid #4a90e2;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.retablissement-section .section-title {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.declarations-list {
+  list-style-type: decimal;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.declarations-list li {
+  font-size: 1rem;
+  color: #34495e;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* Styles pour la section des prières */
+.prayer-section {
+  background-color: #f9f9f9;
+  border-left: 4px solid #6a1b9a;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.prayer-section h2 {
+  color: #4a148c;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.prayer-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.prayer-section ol.prayer-list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.prayer-section ol.prayer-list li {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.fire-declarations {
+  list-style-type: square;
+  padding-left: 25px;
+  margin-bottom: 20px;
+}
+
+.fire-declarations li {
+  color: #b71c1c;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.evening-exhortation {
+  background-color: #fefcfb;
+  border-left: 5px solid #c62828;
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(198, 40, 40, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.evening-exhortation h2 {
+  color: #c62828;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.evening-exhortation p {
+  line-height: 1.7;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.restoration-words {
+  background-color: #fff3e0;
+  border-left: 4px solid #ff9800;
+  padding: 15px 20px;
+  margin-top: 25px;
+  border-radius: 8px;
+}
+
+.restoration-words h3 {
+  color: #e65100;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.restoration-words p {
+  font-style: italic;
+  color: #5d4037;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.prayer-requests {
+    background-color: #f9f9f9;
+    border-left: 5px solid #a52a2a;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.prayer-requests h2 {
+    font-size: 1.5rem;
+    color: #a52a2a;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.prayer-requests ol {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.prayer-requests li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    position: relative;
+    padding-left: 5px;
+}
+/* Section spécifique aux proclamations de succès */
+.proclamations-section {
+  padding: 1.5rem;
+  background-color: #f8f9fa; /* Couleur claire et neutre */
+  border-left: 4px solid #ffc107; /* Accent couleur or */
+  margin: 2rem 0;
+  border-radius: 8px;
+}
+
+.proclamations-section .section-title {
+  font-size: 1.5rem;
+  color: #343a40;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.proclamations-list {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.proclamations-list li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #212529;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.jour4-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.titre-jour {
+  color: #2e3d49;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.verset {
+  font-style: italic;
+  font-size: 14px;
+  color: #444;
+}
+
+.exhortation {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.declaration {
+  background-color: #e8f0fe;
+  padding: 10px;
+  border-left: 4px solid #4a90e2;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 20px;
+}
+.declarations-container {
+  margin-top: 30px;
+  background-color: #fff9ec;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #f4a261;
+}
+
+.titre-declarations {
+  font-size: 18px;
+  color: #b3541e;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.liste-declarations {
+  list-style-type: decimal;
+  padding-left: 20px;
+  color: #444;
+  line-height: 1.8;
+  font-size: 15px;
+}
+.prieres-container {
+  margin-top: 30px;
+  background-color: #edf7f6;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #2a9d8f;
+}
+
+.titre-prieres {
+  font-size: 18px;
+  color: #155e54;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.liste-prieres {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #333;
+  line-height: 1.8;
+  font-size: 15px;
+}
+.jour4-soiree {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 850px;
+  margin: 40px auto;
+  font-family: 'Georgia', serif;
+  line-height: 1.7;
+  color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.jour4-soiree h2 {
+  text-align: center;
+  color: #4a2e84;
+  font-size: 26px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #4a2e84;
+  padding-bottom: 10px;
+}
+
+.jour4-soiree h3 {
+  color: #76348b;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  border-left: 4px solid #76348b;
+  padding-left: 12px;
+}
+
+.jour4-soiree p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.conclusion {
+  background-color: #f1ebff;
+  padding: 20px;
+  border-left: 5px solid #4a2e84;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+.prayer-requests {
+  background-color: #fdfaf6;
+  border-left: 5px solid #b18c2e;
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 800px;
+  font-family: 'Georgia', serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.prayer-requests h2 {
+  color: #6b4e16;
+  text-align: center;
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.prayer-requests ol {
+  padding-left: 20px;
+  color: #333;
+}
+
+.prayer-requests ol li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-size: 1.05em;
+  padding-left: 5px;
+  position: relative;
+}
+
+.prayer-requests ol li::marker {
+  color: #b18c2e;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .prayer-requests {
+    padding: 15px;
+    font-size: 0.95em;
+  }
+}
+.success-declarations {
+  background-color: #f5f5f5;
+  border-left: 6px solid #4CAF50;
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.success-declarations h2 {
+  font-size: 24px;
+  color: #2e7d32;
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.success-declarations ol {
+  padding-left: 20px;
+}
+
+.success-declarations ol li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #333;
+  position: relative;
+}
+
+.success-declarations ol li::before {
+  content: "✓";
+  color: #4CAF50;
+  font-weight: bold;
+  margin-right: 8px;
+}
+.exhortation-matinale {
+  background-color: #fefcf9;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.7;
+}
+
+.exhortation-matinale .titre-jour {
+  font-size: 1.8rem;
+  color: #007b5e;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.exhortation-matinale .theme {
+  font-size: 1.4rem;
+  color: #c67900;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.exhortation-matinale .verset,
+.exhortation-matinale .objectif {
+  background-color: #fff5e6;
+  padding: 1rem;
+  border-left: 5px solid #ffc107;
+  margin-bottom: 1.2rem;
+  border-radius: 8px;
+}
+
+.exhortation-matinale .verset p strong,
+.exhortation-matinale .objectif p strong {
+  color: #8b5e00;
+}
+
+.exhortation-matinale .contenu-exhortation p {
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+.exhortation-matinale .contenu-exhortation p strong {
+  color: #005d52;
+  font-weight: 600;
+}
+
+.exhortation-matinale .contenu-exhortation p em {
+  font-style: italic;
+  color: #444;
+}
+/* Conteneur principal */
+.declarations-section {
+  background: linear-gradient(to right, #f0f0f0, #fff);
+  border-left: 5px solid #d4af37;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 30px 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Titre de section */
+.section-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #b8860b;
+  text-align: center;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Liste numérotée */
+.declarations-list {
+  counter-reset: declaration-counter;
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Chaque déclaration */
+.declarations-list li {
+  counter-increment: declaration-counter;
+  background: #fff;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border-left: 4px solid #b8860b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: relative;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+/* Numérotation personnalisée */
+.declarations-list li::before {
+  content: counter(declaration-counter) ".";
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b8860b;
+  font-weight: bold;
+  font-size: 20px;
+}
+.exhortation5 {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.exhortation5 h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2d6a4f;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.exhortation5 p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.exhortation5 h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2d6a4f;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.exhortation5 ul {
+    font-size: 16px;
+    list-style-type: disc;
+    margin-left: 40px;
+    margin-bottom: 15px;
+}
+
+.exhortation5 ul li {
+    margin-bottom: 8px;
+}
+
+.exhortation5 strong {
+    color: #2d6a4f;
+}
+
+.exhortation5 .quote {
+    font-style: italic;
+    color: #555;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-left: 5px solid #2d6a4f;
+}
+
+.exhortation5 .highlight {
+    background-color: #f2f2f2;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.exhortation5 a {
+    color: #2d6a4f;
+    text-decoration: none;
+}
+
+.exhortation5 a:hover {
+    text-decoration: underline;
+}
+
+.success-proclamations {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.success-proclamations p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.success-proclamations p strong {
+  color: #006400; /* couleur pour le texte en gras (proclamations) */
+  font-size: 1.3rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.success-proclamations p:nth-child(even) {
+  background-color: #eaf5e3;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.success-proclamations p:nth-child(odd) {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.success-proclamations p:last-child {
+  margin-bottom: 0;
+}
+
+.success-proclamations p strong:before {
+  content: "🌟 ";
+  font-size: 1.5rem;
+}
+
+.success-proclamations p:hover {
+  background-color: #d3e8d3;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .success-proclamations {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .success-proclamations p {
+    font-size: 1rem;
+  }
+
+  .success-proclamations p strong {
+    font-size: 1.2rem;
+  }
+}
+
+/* Général */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Titre de l'exhortation */
+.exhortation-title p {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    color: #2c3e50;
+    text-transform: uppercase;
+}
+
+/* Contenu principal */
+.exhortation-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 20px 15px;
+    color: #34495e;
+}
+
+/* Deuxième partie du contenu */
+.exhortation-second-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 20px 15px;
+    color: #34495e;
+    font-style: italic;
+}
+
+/* Troisième partie du contenu */
+.exhortation-third-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 20px 15px;
+    color: #34495e;
+    font-weight: bold;
+}
+
+/* Contenu final */
+.exhortation-final-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 20px 15px;
+    color: #008; /* Vert pour une touche d'espoir et de renouveau */
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Style pour les paragraphes */
+p {
+    margin-bottom: 20px;
+}
+
+/* Ajout d'un fond coloré léger pour chaque section */
+.exhortation-title,
+.exhortation-content,
+.exhortation-second-content,
+.exhortation-third-content,
+.exhortation-final-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+/* Effet de survol sur les sections pour plus d'interactivité */
+.exhortation-title:hover,
+.exhortation-content:hover,
+.exhortation-second-content:hover,
+.exhortation-third-content:hover,
+.exhortation-final-content:hover {
+    background-color: #ecf0f1;
+    cursor: pointer;
+}
+
+.declarations {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.declarations p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.declarations p strong {
+    font-size: 18px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.declarations p:nth-child(even) {
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.declarations p:nth-child(odd) {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.declarations p:hover {
+    background-color: #bdc3c7;
+    cursor: pointer;
+}
+
+.declarations p:last-child {
+    margin-bottom: 0;
+}
+
+/* Style global pour la section des prières */
+.prayers {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+/* Style pour chaque prière individuelle */
+.prayer-item {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-left: 4px solid #6c63ff; /* L'élément de style distinctive */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Mettre en surbrillance la prière au survol */
+.prayer-item:hover {
+  background-color: #e6e6e6;
+}
+
+/* Style pour le numéro de chaque prière */
+.prayer-item strong {
+  color: #6c63ff;
+  font-size: 18px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* Style pour la première ligne des prières */
+.prayer-item:first-of-type {
+  border-top: 4px solid #6c63ff; /* Pour la première prière, ajout d'une bordure pour différencier */
+}
+
+/* Style général du texte */
+.prayer-item {
+  font-weight: 400;
+}
+
+/* Ajout d'un effet lorsque l'utilisateur survole la liste des prières */
+.prayers:hover .prayer-item {
+  cursor: pointer;
+}
+.exhortation6 {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-left: 6px solid #4CAF50; /* Accent vertical pour une touche visuelle */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.exhortation6 header h1 {
+  font-size: 2em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 10px;
+}
+
+.exhortation6 h2 {
+  font-size: 1.5em;
+  color: #4CAF50;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.exhortation6 p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.exhortation6 ul,
+.exhortation6 ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.exhortation6 li {
+  margin-bottom: 10px;
+}
+
+.exhortation6 em {
+  font-style: italic;
+  color: #555;
+}
+
+.exhortation6 strong {
+  font-weight: bold;
+  color: #000;
+}
+
+.prayer-requests {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-left: 6px solid #4CAF50;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.prayer-requests h2 {
+  font-size: 2em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 10px;
+}
+
+.prayer-requests ol {
+  padding-left: 20px;
+}
+
+.prayer-requests li {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+.proclamations6 {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-left: 6px solid #4CAF50;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.proclamations6 h2 {
+  font-size: 2em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 10px;
+}
+
+.proclamations6 ol {
+  padding-left: 20px;
+}
+
+.proclamations6 li {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.exhortation7 {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-left: 6px solid #4CAF50;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.exhortation7 h2 {
+  font-size: 2em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 10px;
+}
+
+.exhortation7 h3 {
+  font-size: 1.5em;
+  color: #2c3e50;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.exhortation7 p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.declarations-retablissement {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-left: 6px solid #4CAF50;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.declarations-retablissement {
+  background-color: #f8f9fa;
+  border-left: 5px solid #007bff;
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.declarations-retablissement h3 {
+  color: #007bff;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.declarations-retablissement ol {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.declarations-retablissement li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: 1.05em;
+  color: #333;
+}
+
+.requetes-priere7 {
+  background-color: #f3f8ff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 20px 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.requetes-priere7 h2 {
+  font-size: 22px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.requetes-priere7 ol {
+  padding-left: 20px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.requetes-priere7 li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.exhortation7 {
+  background-color: #f0f9ff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
+  font-family: 'Georgia', serif;
+  color: #0a2a43;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+.exhortation7 h2 {
+  color: #0077cc;
+  font-size: 20px; /* Réduction de la taille */
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.exhortation7 h2 {
+  color: #0077cc;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.exhortation7 p {
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+.exhortation7 p strong {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: #0d47a1;
+  margin-top: 30px;
+}
+.prayer-requests7 {
+  background-color: #fff7e6;
+  border-left: 5px solid #ffa500;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.prayer-requests7 h3 {
+  font-size: 20px;
+  color: #cc8400;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.prayer-requests7 ul {
+  list-style: decimal inside;
+  padding-left: 10px;
+}
+
+.prayer-requests7 li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+.proclamations7 {
+  background-color: #fff7e6;
+  border-left: 5px solid #ffc107;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.proclamations7 h3 {
+  font-size: 22px;
+  color: #e69500;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.proclamations7 ul {
+  list-style-type: decimal;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.proclamations7 ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4d2e00;
+}
+.retablissement8 {
+  background-color: #f3f7ff;
+  border-left: 4px solid #4a90e2;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.retablissement8 h3 {
+  font-size: 22px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.retablissement8 ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.retablissement8 ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  color: #34495e;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.retablissement8 ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4a90e2;
+  font-weight: bold;
+}
+
+.jour {
+  display: none;
+}
+
+audio {
+  width: 90%;
+  max-width: 600px;
+  height: 60px;
+  margin: 40px auto;
+  display: block;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  outline: none;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+audio.playing {
+  animation: pulseGlow 1.5s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 12px #ff6a00, 0 0 24px #ee0979, 0 0 36px #ff6a00;
+  }
+  50% {
+    box-shadow: 0 0 24px #ee0979, 0 0 36px #ff6a00, 0 0 48px #ee0979;
+  }
+  100% {
+    box-shadow: 0 0 12px #ff6a00, 0 0 24px #ee0979, 0 0 36px #ff6a00;
+  }
+}
+
+/* Conteneur général des audios */
+.audio-container {
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  border: 2px solid gold;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  max-width: 600px;
+  transition: transform 0.3s ease;
+}
+
+.audio-container:hover {
+  transform: scale(1.02);
+}
+
+/* Bouton */
+.audio-container button {
+  background-color: gold;
+  border: none;
+  border-radius: 8px;
+  color: #1e1e1e;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.audio-container button:hover {
+  background-color: #ffcc00;
+}
+
+/* Player audio */
+.audio-container audio {
+  width: 100%;
+  border-radius: 8px;
+  outline: none;
+}
+.active-audio {
+  border: 3px solid yellow;
+  box-shadow: 0 0 25px gold;
+  transition: all 0.3s ease-in-out;
+}
