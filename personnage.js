@@ -675,7 +675,7 @@ stopButton.onclick = endGame;
 
 // Retour à l'accueil
 homeButton.onclick = function() {
-    window.location.href = "jeux.html";
+    window.location.href = "game.html";
 };
 
 // Afficher la première question

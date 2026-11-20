@@ -1,44 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Section Témoignages et Commentaires</title>
-    <link rel="stylesheet" href="appreciation.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Témoignages — Prière en Ligne</title>
+  <meta name="description" content="Partagez votre témoignage avec Prière en Ligne.">
+  <meta name="theme-color" content="#0b1426">
+  <link rel="icon" href="img/logo-rond.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
 </head>
-<body>
-    <!-- Formulaire pour ajouter un témoignage -->
-    <section id="testimonial-section">
-        <h2>Laissez un Témoignage ou un Commentaire</h2>
-        <form id="testimonial-form">
-            <textarea id="testimonial-input" placeholder="Partagez votre expérience..." required></textarea>
-            <button type="submit">Soumettre</button>
-        </form>
-    </section>
+<body data-page="contact">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Prière en Ligne, accueil">
+      <img src="img/logo-rond.jpg" alt="" width="40" height="40">
+      <span>Prière <em>en Ligne</em></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
+    <nav class="site-nav" aria-label="Menu principal">
+      <a href="index.html" data-nav="accueil">Accueil</a>
+      <a href="programmes.html" data-nav="programmes">Programmes</a>
+      <a href="mise.html" data-nav="requetes">Requêtes</a>
+      <a href="game.html" data-nav="jeux">Jeux bibliques</a>
+      <a href="appel.html" data-nav="contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- Liste des témoignages -->
-    <section id="testimonials-list">
-        <h3>Témoignages</h3>
-        <ul id="testimonials">
-            <!-- Témoignages seront ajoutés ici -->
-        </ul>
-    </section>
+<section class="hero">
+  <div class="wrap wrap-narrow">
+    <p class="eyebrow">Témoignages</p>
+    <h1>Ce que Dieu <em>a fait</em></h1>
+    <p class="lead">Partagez ce que Dieu a accompli dans votre vie pendant ces temps de prière.</p>
+  </div>
+</section>
 
-    <!-- Section des commentaires -->
-    <section id="comments-section">
-        <h3>Commentaires</h3>
-        <ul id="comments-list">
-            <!-- Commentaires seront ajoutés ici -->
-        </ul>
-    </section>
+<section class="section">
+  <div class="wrap wrap-narrow">
+    <div class="card testimony-card reveal" id="testimonial-section">
+      <h3>Laisser un témoignage</h3>
+      <form id="testimonial-form">
+        <textarea id="testimonial-input" rows="5" placeholder="Partagez votre expérience…" required></textarea>
+        <div class="btn-row" style="justify-content:flex-end;margin-top:14px"><button class="btn" type="submit">Publier</button></div>
+      </form>
+    </div>
+    <div class="testimonies" id="testimonials-list">
+      <h3>Témoignages</h3>
+      <ul id="testimonials"></ul>
+    </div>
+    <div class="testimonies" id="comments-section" hidden>
+      <ul id="comments-list"></ul>
+    </div>
+    <div class="like-row" id="like-buttons">
+      <button class="btn btn-outline" id="like-btn" type="button">♡ J'aime</button>
+      <span id="like-count">0</span>
+    </div>
+  </div>
+</section>
 
-    <!-- Boutons J'aime -->
-    <section id="like-buttons">
-        <h3>Exprimez votre appréciation</h3>
-        <button id="like-btn">👍 J'aime</button>
-        <p id="like-count">0</p>
-    </section>
-
-    <script src="appreciation.js"></script>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><img src="img/logo-rond.jpg" alt="" width="40" height="40"><span>Prière <em>en Ligne</em></span></a>
+        <p>Un espace dédié à la prière, à la méditation de la Parole et à la communion avec Dieu.</p>
+      </div>
+      <div>
+        <h4>Explorer</h4>
+        <a href="programmes.html">Programmes de jeûne</a>
+        <a href="mise.html">Bibliothèque de requêtes</a>
+        <a href="game.html">Jeux bibliques</a>
+      </div>
+      <div>
+        <h4>Nous rejoindre</h4>
+        <a href="https://chat.whatsapp.com/JnEG13M6Zpk2LB85yLtRE8" target="_blank" rel="noopener">Groupe WhatsApp</a>
+        <a href="https://wa.me/2290164013074" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+        <a href="mailto:enlignepriere@gmail.com">enlignepriere@gmail.com</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span data-year>2026</span> Prière en Ligne · Tous droits réservés</span>
+      <span>Cotonou, Bénin</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+<script src="appreciation.js"></script>
 </body>
 </html>

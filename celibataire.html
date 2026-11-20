@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Chemin du Bon Conjoint</title>
-    <link rel="stylesheet" href="celibataire.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Le chemin du bon conjoint — Jeux bibliques — Prière en Ligne</title>
+  <meta name="description" content="Un jeu de sagesse biblique pour bien préparer son mariage.">
+  <meta name="theme-color" content="#0b1426">
+  <link rel="icon" href="img/logo-rond.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/games.css">
 </head>
-<body>
+<body data-page="jeux" class="game-page">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Prière en Ligne, accueil">
+      <img src="img/logo-rond.jpg" alt="" width="40" height="40">
+      <span>Prière <em>en Ligne</em></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
+    <nav class="site-nav" aria-label="Menu principal">
+      <a href="index.html" data-nav="accueil">Accueil</a>
+      <a href="programmes.html" data-nav="programmes">Programmes</a>
+      <a href="mise.html" data-nav="requetes">Requêtes</a>
+      <a href="game.html" data-nav="jeux">Jeux bibliques</a>
+      <a href="appel.html" data-nav="contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    <div class="game-container">
-        <h1>Le Chemin du Bon Conjoint</h1>
+<section class="hero hero-game">
+  <div class="wrap wrap-narrow">
+    <p class="eyebrow"><a href="game.html">Jeux bibliques</a></p>
+    <h1>Le chemin du bon conjoint</h1>
+    <p class="lead">Un jeu de sagesse biblique pour bien préparer son mariage.</p>
+  </div>
+</section>
+
+<main class="section game-main">
+  <div class="wrap wrap-narrow">
+    <div class="game-card">
+<div class="game-container">
+        
         <p id="lives">❤️ Vies restantes : <span id="life-count">3</span></p>
         <p id="answered">📋 Questions répondues : <span id="answered-count">0</span></p>
         <p id="wrong">❌ Mauvaises réponses : <span id="wrong-count">0</span></p>
@@ -20,11 +53,41 @@
         <div id="appreciation" class="appreciation-message"></div>
         <button id="stop-button">Arrêter le jeu</button>
         <p id="result"></p>
-        <button id="home-button" style="display: none;">🏠 Retour à l'accueil</button>
+        <button id="home-button" style="display: none;">Retour aux jeux</button>
         
     </div>
+    </div>
+    <p class="back-games"><a href="game.html">← Tous les jeux</a></p>
+  </div>
+</main>
 
-    <script src="celibataire.js"></script>
-
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><img src="img/logo-rond.jpg" alt="" width="40" height="40"><span>Prière <em>en Ligne</em></span></a>
+        <p>Un espace dédié à la prière, à la méditation de la Parole et à la communion avec Dieu.</p>
+      </div>
+      <div>
+        <h4>Explorer</h4>
+        <a href="programmes.html">Programmes de jeûne</a>
+        <a href="mise.html">Bibliothèque de requêtes</a>
+        <a href="game.html">Jeux bibliques</a>
+      </div>
+      <div>
+        <h4>Nous rejoindre</h4>
+        <a href="https://chat.whatsapp.com/JnEG13M6Zpk2LB85yLtRE8" target="_blank" rel="noopener">Groupe WhatsApp</a>
+        <a href="https://wa.me/2290164013074" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+        <a href="mailto:enlignepriere@gmail.com">enlignepriere@gmail.com</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span data-year>2026</span> Prière en Ligne · Tous droits réservés</span>
+      <span>Cotonou, Bénin</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+<script src="celibataire.js"></script>
 </body>
 </html>

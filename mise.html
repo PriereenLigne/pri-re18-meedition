@@ -1,268 +1,131 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prière en Ligne</title>
-    <!-- Lien vers le fichier CSS externe -->
-    <link rel="stylesheet" href="mise.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bibliothèque de requêtes de prière — Prière en Ligne</title>
+  <meta name="description" content="Plus de 2 800 requêtes de prière classées par thème : conversion, Saint-Esprit, guérison, délivrance, mariage, travail, études, famille et plus encore.">
+  <meta name="theme-color" content="#0b1426">
+  <link rel="icon" href="img/logo-rond.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="mise.css">
 </head>
-<body>
-    <header>
-    <div class="logo-container logo-left">
-    <img src="logo.png" alt="Logo gauche" class="logo">
+<body data-page="requetes">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Prière en Ligne, accueil">
+      <img src="img/logo-rond.jpg" alt="" width="40" height="40">
+      <span>Prière <em>en Ligne</em></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
+    <nav class="site-nav" aria-label="Menu principal">
+      <a href="index.html" data-nav="accueil">Accueil</a>
+      <a href="programmes.html" data-nav="programmes">Programmes</a>
+      <a href="mise.html" data-nav="requetes">Requêtes</a>
+      <a href="game.html" data-nav="jeux">Jeux bibliques</a>
+      <a href="appel.html" data-nav="contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap wrap-narrow">
+    <p class="eyebrow">Bibliothèque de requêtes</p>
+    <h1>Plus de 2 800 requêtes <em>pour votre vie</em></h1>
+    <p class="lead">52 thèmes de prière, de la conversion à la louange. Cherchez un mot, ou choisissez un thème ci-dessous.</p>
+  </div>
+</section>
+
+<div class="search-bar-wrap">
+  <div class="wrap wrap-narrow">
+    <form class="search-bar" id="search-section" role="search" onsubmit="return false">
+      <span class="search-icon" aria-hidden="true">⌕</span>
+      <input type="search" id="search-bar" placeholder="Rechercher : guérison, travail, mariage, examen…" autocomplete="off" aria-label="Rechercher une requête">
+      <button type="button" class="search-clear" id="search-clear" aria-label="Effacer la recherche" hidden>×</button>
+    </form>
+    <p class="search-status" id="result-count" aria-live="polite"></p>
+  </div>
 </div>
 
-        <h1>Prière en Ligne</h1>
-        <nav>
-            <ul>       
-                <li><a href="#accueil">Accueil</a></li> 
-                <li><a href="#boites-priere">Prières</a></li>
-                
-               <li><a href="a-propos.html"<li><a href="#a-propos">À Propos</a></li>
-                
-                <li><a href="#Contacts">Contacts</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main-container"><section id="accueil" class="accueil-section">
-    <div class="overlay"></div>
-    <div class="content">
-        <h1>Bienvenue sur Prière en Ligne</h1>
-        <p>Un espace dédié à la prière, au partage, et à la communion avec Dieu.</p>
-        <p>Découvrez plus de 2.800 requêtes de prière</p>
-       <div class="search-section">
-            <a href="#search-section">Rechercher une requetes</a>
-        </div>
+<main>
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">Les thèmes</p>
+        <h2>Choisissez un sujet de prière</h2>
+      </div>
+      <nav class="theme-grid" id="boites-priere" aria-label="Thèmes de prière">
+        <a class="theme-chip" href="#boite-1" data-box="1"><span class="num">01</span><span class="t">Prière pour la conversion</span></a>
+        <a class="theme-chip" href="#boite-2" data-box="2"><span class="num">02</span><span class="t">Prière pour la plénitude du Saint-Esprit</span></a>
+        <a class="theme-chip" href="#boite-3" data-box="3"><span class="num">03</span><span class="t">Décharger son fardeau</span></a>
+        <a class="theme-chip" href="#boite-4" data-box="4"><span class="num">04</span><span class="t">Prière pour le réveil spirituel</span></a>
+        <a class="theme-chip" href="#boite-5" data-box="5"><span class="num">05</span><span class="t">Prière pour l'orientation dans les ministères</span></a>
+        <a class="theme-chip" href="#boite-6" data-box="6"><span class="num">06</span><span class="t">Prière pour la manifestation des fruits de l'Esprit-Saint</span></a>
+        <a class="theme-chip" href="#boite-7" data-box="7"><span class="num">07</span><span class="t">Prière pour les dons du Saint-Esprit</span></a>
+        <a class="theme-chip" href="#boite-8" data-box="8"><span class="num">08</span><span class="t">Prière pour combattre l’adversité</span></a>
+        <a class="theme-chip" href="#boite-9" data-box="9"><span class="num">09</span><span class="t">Prière pour la libération de sa destinée</span></a>
+        <a class="theme-chip" href="#boite-10" data-box="10"><span class="num">10</span><span class="t">Prière contre la sorcellerie</span></a>
+        <a class="theme-chip" href="#boite-11" data-box="11"><span class="num">11</span><span class="t">Prière contre les esprits des eaux, mari et femme de nuit</span></a>
+        <a class="theme-chip" href="#boite-12" data-box="12"><span class="num">12</span><span class="t">Prière contre les esprits qui attaquent la nuit</span></a>
+        <a class="theme-chip" href="#boite-13" data-box="13"><span class="num">13</span><span class="t">Prière pour être délivré de la malédiction</span></a>
+        <a class="theme-chip" href="#boite-14" data-box="14"><span class="num">14</span><span class="t">Prière contre l’esprit de pauvreté</span></a>
+        <a class="theme-chip" href="#boite-15" data-box="15"><span class="num">15</span><span class="t">Prière contre l’esprit de célibat</span></a>
+        <a class="theme-chip" href="#boite-16" data-box="16"><span class="num">16</span><span class="t">Prière contre l’esprit de division des foyers</span></a>
+        <a class="theme-chip" href="#boite-17" data-box="17"><span class="num">17</span><span class="t">Requêtes de prière contre la masturbation, l’adultère, la fornication et l’impudicité</span></a>
+        <a class="theme-chip" href="#boite-18" data-box="18"><span class="num">18</span><span class="t">Requêtes de prière contre le chômage sous toutes ses formes</span></a>
+        <a class="theme-chip" href="#boite-19" data-box="19"><span class="num">19</span><span class="t">Requêtes de prière pour les aspirants au commerce ou ceux qui veulent monter une entreprise</span></a>
+        <a class="theme-chip" href="#boite-20" data-box="20"><span class="num">20</span><span class="t">Requêtes de prière pour les fiancés</span></a>
+        <a class="theme-chip" href="#boite-21" data-box="21"><span class="num">21</span><span class="t">Requête de prière contre le stress</span></a>
+        <a class="theme-chip" href="#boite-22" data-box="22"><span class="num">22</span><span class="t">Requêtes de prière contre la dépression</span></a>
+        <a class="theme-chip" href="#boite-23" data-box="23"><span class="num">23</span><span class="t">Prières contre l'esprit de mort</span></a>
+        <a class="theme-chip" href="#boite-24" data-box="24"><span class="num">24</span><span class="t">Requêtes de prière pour briser les liens de malheur, de précarité, de souffrance et d'amertume</span></a>
+        <a class="theme-chip" href="#boite-25" data-box="25"><span class="num">25</span><span class="t">Requêtes de prière contre les liens de famille</span></a>
+        <a class="theme-chip" href="#boite-26" data-box="26"><span class="num">26</span><span class="t">Prière pour demander la grâce de Dieu dans sa vie, dans les affaires, le commerce et les projets</span></a>
+        <a class="theme-chip" href="#boite-27" data-box="27"><span class="num">27</span><span class="t">Requêtes de prière pour l'excellence</span></a>
+        <a class="theme-chip" href="#boite-28" data-box="28"><span class="num">28</span><span class="t">Requêtes de prière sur l'esprit de créativité et d'ingéniosité</span></a>
+        <a class="theme-chip" href="#boite-29" data-box="29"><span class="num">29</span><span class="t">Requêtes contre l'esprit de peur</span></a>
+        <a class="theme-chip" href="#boite-30" data-box="30"><span class="num">30</span><span class="t">Requêtes de prière pour se libérer des addictions</span></a>
+        <a class="theme-chip" href="#boite-31" data-box="31"><span class="num">31</span><span class="t">Requêtes de prière pour renverser les autels sataniques</span></a>
+        <a class="theme-chip" href="#boite-32" data-box="32"><span class="num">32</span><span class="t">Prière pour la guérison divine</span></a>
+        <a class="theme-chip" href="#boite-33" data-box="33"><span class="num">33</span><span class="t">Prière pour le choix du conjoint (e)</span></a>
+        <a class="theme-chip" href="#boite-34" data-box="34"><span class="num">34</span><span class="t">Prière pour la préparation de son mariage (cérémonie de dot, mariage civil et la bénédiction nuptiale)</span></a>
+        <a class="theme-chip" href="#boite-35" data-box="35"><span class="num">35</span><span class="t">Requêtes de prière pour demander la providence divine</span></a>
+        <a class="theme-chip" href="#boite-36" data-box="36"><span class="num">36</span><span class="t">Prières pour l'ouverture des portes fermées</span></a>
+        <a class="theme-chip" href="#boite-37" data-box="37"><span class="num">37</span><span class="t">Requêtes de prière pour la promotion</span></a>
+        <a class="theme-chip" href="#boite-38" data-box="38"><span class="num">38</span><span class="t">Requêtes de prière contre les divisions dans les relations de couple</span></a>
+        <a class="theme-chip" href="#boite-39" data-box="39"><span class="num">39</span><span class="t">Prières pour ramener le premier amour dans le couple</span></a>
+        <a class="theme-chip" href="#boite-40" data-box="40"><span class="num">40</span><span class="t">Requêtes de prière pour le retour d'un(e) partenaire qui nous a abandonné(e)</span></a>
+        <a class="theme-chip" href="#boite-41" data-box="41"><span class="num">41</span><span class="t">Requêtes de prière pour les couples au bord du divorce</span></a>
+        <a class="theme-chip" href="#boite-42" data-box="42"><span class="num">42</span><span class="t">Prière pour la paix dans son pays</span></a>
+        <a class="theme-chip" href="#boite-43" data-box="43"><span class="num">43</span><span class="t">Requêtes de prière pour le déblocage des papiers de voyage</span></a>
+        <a class="theme-chip" href="#boite-44" data-box="44"><span class="num">44</span><span class="t">Requêtes de prière pour les projets de voyages</span></a>
+        <a class="theme-chip" href="#boite-45" data-box="45"><span class="num">45</span><span class="t">Prière pour être un bon leader</span></a>
+        <a class="theme-chip" href="#boite-46" data-box="46"><span class="num">46</span><span class="t">Prière pour être un bon mari</span></a>
+        <a class="theme-chip" href="#boite-47" data-box="47"><span class="num">47</span><span class="t">Prières pour être une bonne femme</span></a>
+        <a class="theme-chip" href="#boite-48" data-box="48"><span class="num">48</span><span class="t">Prières pour être des hommes et femmes intègres</span></a>
+        <a class="theme-chip" href="#boite-49" data-box="49"><span class="num">49</span><span class="t">Prières pour avoir la sagesse et l'intelligence dans les études</span></a>
+        <a class="theme-chip" href="#boite-50" data-box="50"><span class="num">50</span><span class="t">Prières pour la préparation des examens et concours</span></a>
+        <a class="theme-chip" href="#boite-51" data-box="51"><span class="num">51</span><span class="t">Prière pour remercier le Seigneur pour ce qu'il est pour nous</span></a>
+        <a class="theme-chip" href="#boite-52" data-box="52"><span class="num">52</span><span class="t">Requêtes d'adoration et de louange à l'Éternel Dieu</span></a>
+      </nav>
     </div>
-</section>
-     <h2>Barre de recherche</h2>
-         <!-- Barre de recherche pour les prières --><section id="search-section">
-    <input type="text" id="search-bar" placeholder="Rechercher une prière..." />
-    <button onclick="rechercherPriere()">Rechercher</button>
-</section>
+  </section>
 
-        <section class="prieres">
-            <div class="prieres-container">
-               <section class="prieres">
-   
-                <!-- Génération de 50 boîtes pour les prières -->
-        <h2>50 Boîtes de Prière</h2>
-        <section id="boites-priere">
-        <div class="priere-box">
-            <a href="#boite-1">Prière pour la conversion</a>
-        </div>
-        <div class="priere-box">
-            <a href="#boite-2">Prière pour la plénitude du Saint-Esprit</a>
-        </div>
-        <div class="priere-box">
-            <a href="#boite-3">Décharger son fardeau</a>
-        </div>
-        <div class="priere-box">
-          <a href="#boite-4"
-          >Prière pour le réveil spirituel </a>
-        </div>
-         <div class="priere-box">
-          <a href="#boite-5"
-          >Prière Pour l'orientation dans les ministères</a>
-        </div>
-        <div class="priere-box">
-          <a href="#boite-6"
-          >Prière pour la manifestation des fruits de l'Esprit-Saint</a>
-        </div>
-        <div class="priere-box">
-          <a href="#boite-7"
-          >Prière pour les dons du Saint-Esprit</a>
-        </div>
-         <div class="priere-box">
-          <a href="#boite-8"
-          >Prière pour combattre l’adversité</a>
-        </div>
- <div class="priere-box">
-          <a href="#boite-9"
-          >Prière pour la libération de sa destiné</a>
-        </div>
- <div class="priere-box">
-          <a href="#boite-10"
-          >Prière contre la sorcellerie</a>
-        </div>
- <div class="priere-box">
-          <a href="#boite-11"
-          >Prière contre les esprits des eaux, mari et femme de nuit</a>
-        </div>
- <div class="priere-box">
-          <a href="#boite-12"
-          >Prière contre les esprits qui attaquent la nuit</a>
-        </div>
- <div class="priere-box">
-          <a href="#boite-13"
-          >Prière pour être délivré de la malédiction</a>
-        </div>
-      <div class="priere-box">
-          <a href="#boite-14"
-          >Prière contre l’esprit de pauvreté</a>
-        </div>
-<div class="priere-box">
-          <a href="#boite-15"
-          >Prière contre l’esprit de célibat</a>
-        </div>
-<div class="priere-box">
-          <a href="#boite-16"
-          >Prière contre l’esprit de division des foyers</a>
-        </div>
-        <div class="priere-box">
-          <a href="#boite-17"
-          >Requêtes de prière contre la masturbation, l’adultère, la fornication et l’impudicité</a>
-        </div>
-<div class="priere-box">
-          <a href="#boite-18"
-          >Requêtes de prière contre le chômage sous toutes ses formes.</a>
-        </div>
-<div class="priere-box">
-          <a href="#boite-19"
-          >Requêtes de prière pour les aspirants au commerce ou ceux qui veulent monter une entreprise</a>
-        </div>
-<div class="priere-box">
-          <a href="#boite-20"
-          >Requêtes de prière pour les fiancés</a>
-        </div>
-       <div class="priere-box">
-          <a href="#boite-21"
-          >Requête de prière contre le stress</a>
-        </div>
-      <div class="priere-box">
-          <a href="#boite-22"
-          >Requêtes de prière contre la depression</a>
-        </div>
-      <div class="priere-box">
-          <a href="#boite-23"
-          >Prières contre l'esprit de mort</a>
-        </div>
-       <div class="priere-box">
-          <a href="#boite-24"
-          >Requêtes de Prière pour briser les liens de malheur, de precarité, de souffrance et d'amertume</a>
-        </div>
-        <div class="priere-box">
-          <a href="#boite-25"
-          >Requêtes de prière contre les liens de famille</a>
-        </div>
-        <div class="priere-box">
-          <a href="#boite-26"
-          >Prière pour demander la grâce de Dieu dans sa vie, dans les affaires, le commerce et les projets.</a>
-        </div>
-         <div class="priere-box">
-          <a href="#boite-27"
-          >Requêtes de prière pour l'excellence</a>
-        </div>
-        <div class="priere-box">
-          <a href="#boite-28"
-          >Requêtes de prière sur l'esprit de créativité et d'ingéniosité</a>
-        </div>
-       <div class="priere-box">
-          <a href="#boite-29"
-          >Requêtes contre l'esprit de peur</a>
-        </div>
-        <div class="priere-box">
-          <a href="#boite-30"
-          >Requêtes de prière pour se libérer des addictions</a>
-        </div>
-        <div class="priere-box">
-          <a href="#boite-31"
-          >Requêtes de Prière pour renverser les autels sataniques</a>
-        </div>
-        <div class="priere-box">
-          <a href="#boite-32"
-          >Prière pour la guérison divine</a>
-          
-        </div>
-        <div class="priere-box">
-          <a href="#boite-33"
-          >Prière pour le choix du conjoint (e)</a>
-          
-        </div>
-        <div class="priere-box">
-          <a href="#boite-34"
-          >Prière pour la préparation de son mariage (Cérémonie de dote, mariage civil et la bénédiction nuptiale).</a>
-        </div>
-       <div class="priere-box">
-          <a href="#boite-35"
-          >Requêtes de prière pour demander la providence divine</a>
-        </div>
-        <div class="priere-box">
-          <a href="#boite-36"
-          >Prières pour l'ouverture des Portes fermées</a>
-        </div>
-        <div class="priere-box">
-          <a href="#boite-37"
-          >Requêtes de prière pour la promotion</a>
-        </div>
-        <div class="priere-box">
-          <a href="#boite-38"
-          >Requêtes de prière contre les divisions dans les relations de couple</a>
-        </div>
-        <div class="priere-box">
-          <a href="#boite-39"
-          >Prières pour ramener le premier amour dans le couple</a>
-        </div>
-        <div class="priere-box">
-          <a href="#boite-40"
-          >Requêtes de prière pour le retour d'un(e) partenaire qui nous a abandonné(e) </a>
-        </div>
-         <div class="priere-box">
-          <a href="#boite-41"
-          >Requêtes de prière pour les couples au bord du divorce</a>
-        </div>
-        <div class="priere-box">
-          <a href="#boite-42"
-          >Prière pour la paix dans son pays</a>
-        </div>
-        <div class="priere-box">
-          <a href="#boite-43"
-          >Requêtes de prière pour le déblocage des papiers de voyage</a>
-        </div>
- <div class="priere-box">
-          <a href="#boite-44"
-          >Requêtes de prière pour les projets de voyages</a>
-        </div>
- <div class="priere-box">
-          <a href="#boite-45"
-          >Prière pour être un bon leader</a>
-        </div>
- <div class="priere-box">
-          <a href="#boite-46"
-          >Prière pour être un bon mari</a>
-        </div>
- <div class="priere-box">
-          <a href="#boite-47"
-          >Prières pour être une bonne femme</a>
-        </div>
- <div class="priere-box">
-          <a href="#boite-48"
-          >Prières pour être des hommes et femmes intègres</a>
-        </div>
- <div class="priere-box">
-          <a href="#boite-49"
-          >Prières pour avoir la sagesse et l'intelligence dans les études</a>
-        </div>
- <div class="priere-box">
-          <a href="#boite-50"
-          >Prières pour la préparation des examens et concours</a>
-        </div>
- <div class="priere-box">
-          <a href="#boite-51"
-          >Prière pour remercier le Seigneur pour ce qu'il est pour nous</a>
-          </div>
-         <div class="priere-box">
-          <a href="#boite-52"
-          >Requêtes d'adoration et de louange à l'Éternel Dieu</a>
-        </div>
-    </section>
-                <!-- Sous-sections pour chaque boîte -->
-    <section id="boite-1" class="sous-section">
-        <h3>Prière pour votre conversion</h3>
-      <p>  <audio controls>
-              <source src="1.mp3" type="audio/mp3">
-            </audio</p>
+  <section class="section" style="padding-top:24px">
+    <div class="wrap wrap-narrow">
+      <div class="req-list" data-bible-links>
+      <article class="req-section" id="boite-1">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">01</span>
+          <span class="req-title">Prière pour la conversion</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/1.mp3" type="audio/mp3">
+            </audio>
             
         <p> 1. Seigneur Jésus, ouvre mon cœur et mon esprit pour recevoir Ta vérité et Ta grâce.</p>
 
@@ -303,13 +166,18 @@
 <p>19. Esprit de Dieu, renforce ma foi et ma confiance en Toi dans tous les aspects de ma vie</p>
 
 <p>20. Seigneur, fais de moi un instrument de Ta paix et de Ton amour dans ce monde..</p>
-    </section>
-
-    <section id="boite-2" class="sous-section">
-        <h3>Prière pour la plénitude du Saint-Esprit</h3>
-       <p> <audio controls>
-              <source src="2.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-2">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">02</span>
+          <span class="req-title">Prière pour la plénitude du Saint-Esprit</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/2.mp3" type="audio/mp3">
+            </audio>
 <p>1. Seigneur, remplis-moi de ton Saint-Esprit et de ton feu.</p>
 
 <p>2. Père céleste, je prie pour une nouvelle effusion du Saint-Esprit dans ma vie.</p>
@@ -409,12 +277,18 @@
 <p>49. Père céleste, je prie pour une nouvelle effusion de ton Esprit dans ma vie.</p>
 
 <p>50. Seigneur, baptise-moi du Saint-Esprit et du feu pour te glorifier.</p>
-    </section>
-<section id="boite-3" class="sous-section">
-        <h3>Décharger son fardeau</h3>
-        <p><audio controls>
-              <source src="3.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-3">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">03</span>
+          <span class="req-title">Décharger son fardeau</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/3.mp3" type="audio/mp3">
+            </audio>
 <p>1. Seigneur Jésus, prends tous mes soucis et mes angoisses, et accorde-moi Ta paix.</p>
 
 <p>2. Père céleste, je dépose mes peurs et mes doutes à Tes pieds, aide-moi à avoir confiance en Toi.</p>
@@ -514,12 +388,18 @@
 <p>49. Jésus, libère-moi du fardeau des attentes irréalistes, aide-moi à accepter Ta volonté.</p>
 
 <p>50. Seigneur, je dépose tous mes fardeaux à Tes pieds, accorde-moi Ta paix, Ta joie et Ton repos.</p>
-    </section>
-    <section id="boite-4" class="sous-section">
-        <h3>Prière pour le réveil spirituel </h3>
-     <p> <audio controls>
-              <source src="4.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-4">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">04</span>
+          <span class="req-title">Prière pour le réveil spirituel</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/4.mp3" type="audio/mp3">
+            </audio>
 <p>1. Seigneur, envoie un réveil spirituel dans ma vie et dans mon église.</p>
 <p>2. Père céleste, réveille nos cœurs pour te rechercher avec passion.</p>
 <p>3. Saint-Esprit, viens et allume un feu de réveil dans notre communauté.</p>
@@ -550,12 +430,18 @@
 <p>28. Saint-Esprit, viens et réveille notre amour pour la justice et la miséricorde.</p>
 <p>29. Père, réveille nos esprits pour discerner ta voix et suivre tes directives.</p>
 <p>30. Seigneur, que ton Esprit Saint allume un réveil durable et profond en nous.</p>
-    </section>
-    <section id="boite-5" class="sous-section">
-        <h3>Prière Pour l'orientation dans les ministères </h3>
-        <p><audio controls>
-              <source src="5.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-5">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">05</span>
+          <span class="req-title">Prière pour l'orientation dans les ministères</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/5.mp3" type="audio/mp3">
+            </audio>
 <p>1. Seigneur, guide-moi dans le ministère que tu as préparé pour moi.</p>
 <p>2. Père céleste, révèle-moi le chemin à suivre pour servir dans ton œuvre.</p>
 <p>3. Saint-Esprit, donne-moi la clarté et la vision pour mon ministère.</p>
@@ -606,13 +492,18 @@
 <p>48. Seigneur, aide-moi à rester fidèle à la vérité de ta parole dans mon ministère.</p>
 <p>49. Père céleste, guide-moi pour être un exemple de ton amour et de ta grâce.</p>
 <p>50. Seigneur, accorde-moi la force et la persévérance pour continuer à te servir avec passion et dévouement.</p>
-    </section>
-    <section id="boite-6" class="sous-section">
-        <h3>Prière pour la manifestation des fruits de l'Esprit-Saint
-</h3>
-        <p><audio controls>
-              <source src="6.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-6">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">06</span>
+          <span class="req-title">Prière pour la manifestation des fruits de l'Esprit-Saint</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/6.mp3" type="audio/mp3">
+            </audio>
 <p>1. Seigneur, aide-moi à manifester l’amour dans toutes mes actions et paroles.</p>
 <p>2. Père céleste, remplis-moi de ta joie divine dans chaque circonstance.</p>
 <p>3. Saint-Esprit, donne-moi la paix qui dépasse toute compréhension.</p>
@@ -653,12 +544,18 @@
 <p>38. Seigneur, accorde-moi la paix pour que je sois un instrument de réconciliation.</p>
 <p>39. Père, aide-moi à manifester la patience dans les moments de frustration.</p>
 <p>40. Seigneur, remplis-moi de ta bonté pour que je sois un exemple de ta grâce.</p>
-    </section>
-    <section id="boite-7" class="sous-section">
-        <h3>Prière pour les dons du Saint-Esprit </h3>
-        <p><audio controls>
-              <source src="7.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-7">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">07</span>
+          <span class="req-title">Prière pour les dons du Saint-Esprit</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/7.mp3" type="audio/mp3">
+            </audio>
 <p>1. Seigneur, accorde-moi le don de sagesse pour discerner ta volonté.</p>
 <p>2. Père céleste, donne-moi la sagesse divine pour prendre les bonnes décisions.</p>
 <p>3. Saint-Esprit, remplis-moi de ta sagesse dans toutes les situations.</p>
@@ -699,12 +596,18 @@
 <p>38. Saint-Esprit, remplis-moi de tes dons pour l’édification de l’église.</p>
 <p>39. Seigneur, aide-moi à utiliser les dons du Saint-Esprit pour glorifier ton nom.</p>
 <p>40. Père céleste, accorde-moi une vie remplie des neuf dons du Saint-Esprit pour accomplir ta volonté.</p>
-    </section>
-<section id="boite-8" class="sous-section">
-        <h3>Prière pour combattre l’adversité</h3>
-        <p><audio controls>
-              <source src="8.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-8">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">08</span>
+          <span class="req-title">Prière pour combattre l’adversité</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/8.mp3" type="audio/mp3">
+            </audio>
 
 <p>1. Seigneur, donne-moi la force de surmonter toutes les épreuves que je rencontre.</p>
 <p>2. Père céleste, accorde-moi la paix et la sérénité face aux difficultés.</p>
@@ -756,12 +659,18 @@
 <p>48. Saint-Esprit, guide-moi et donne-moi la sagesse pour faire face aux défis.</p>
 <p>49. Seigneur, que ta présence m’accompagne et me soutienne dans les moments difficiles.</p>
 <p>50. Père céleste, accorde-moi la paix, la force et la résilience pour surmonter l’adversité.</p>
-    </section>
-    <section id="boite-9" class="sous-section">
-        <h3>Prière pour la libération de sa destiné</h3>
-        <p><audio controls>
-              <source src="9.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-9">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">09</span>
+          <span class="req-title">Prière pour la libération de sa destinée</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/9.mp3" type="audio/mp3">
+            </audio>
 
 <p>1. Seigneur, libère ma destinée de toute emprise satanique au nom de Jésus.</p>
 <p>2. Père céleste, révèle les plans que tu as pour ma destinée.</p>
@@ -813,12 +722,19 @@
 <p>48. Père céleste, restaure l’intégrité et la plénitude de ma destinée.</p>
 <p>49. Seigneur, par ta grâce, libère-moi de toute influence négative qui affecte ma destinée.</p>
 <p>50. Par la puissance du Saint-Esprit, je déclare que ma destinée est sous la protection divine et qu’elle s’accomplira selon la volonté de Dieu.</p>
-    </section>
-<section id="boite-10" class="sous-section">
-        <<h3>Prière contre la sorcellerie</h3>
-        <p><audio controls>
-              <source src="10.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-10">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">10</span>
+          <span class="req-title">Prière contre la sorcellerie</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<<h3>Prière contre la sorcellerie</h3>
+        <audio controls data-label="Écouter ces requêtes">
+              <source src="audio/10.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur Jésus, par ta puissance, détruis toute sorcellerie dans ma vie.</p>
 <p>2. Père céleste, envoie ton feu pour consommer toute œuvre de sorcellerie dirigée contre moi.</p>
 <p>3. Au nom de Jésus, je brise toute malédiction de sorcellerie sur ma famille.</p>
@@ -889,12 +805,18 @@
 <p>68. Seigneur, par ton Esprit, libère-moi de toute influence de sorcellerie sur ma santé.</p>
 <p>69. Père céleste, que toutes les chaînes de sorcellerie contre moi soient brisées maintenant.</p>
 <p>70. Seigneur, par ta puissance, libère-moi de toutes les influences de sorcellerie sur ma famille.</p>
-    </section>
-<section id="boite-11" class="sous-section">
-        <h3>Prière contre les esprits des eaux, mari et femme de nuit</h3>
-        <p><audio controls>
-              <source src="11.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-11">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">11</span>
+          <span class="req-title">Prière contre les esprits des eaux, mari et femme de nuit</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/11.mp3" type="audio/mp3">
+            </audio>
 
 <p>1. Seigneur Jésus, par ton sang, je me libère de tout esprit des eaux.</p>
 <p>2. Père céleste, envoie ton feu dévorant pour consumer tout esprit marin dans ma vie.</p>
@@ -999,12 +921,18 @@
 <p>100. Seigneur, purifie ma vie de toute influence des esprits des eaux et accorde-moi la victoire totale en Jésus-Christ.</p>
 
 <p><b>Qu’il en soit ainsi, au nom puissant de Jésus-Christ. Amen.</b></p>
-    </section>
-<section id="boite-12" class="sous-section">
-        <h3>Prière contre les esprits qui attaquent la nuit</h3>
-       <p> <audio controls>
-              <source src="12.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-12">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">12</span>
+          <span class="req-title">Prière contre les esprits qui attaquent la nuit</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/12.mp3" type="audio/mp3">
+            </audio>
         <p><p>1. Seigneur Jésus, protège-moi de toute attaque nocturne des esprits malins.</p>
 
 <p>2. Par la puissance du Saint-Esprit, je couvre mon sommeil du sang de Jésus.</p>
@@ -1083,12 +1011,18 @@
 <p>39. Seigneur, fortifie-moi dans la prière et accorde-moi la délivrance de toute attaque nocturne.</p>
 
 <p>40. Par la puissance de Jésus-Christ, je proclame ma liberté et ma protection contre les esprits de la nuit.</p>
-    </section>
-<section id="boite-13" class="sous-section">
-        <h3>Prière pour être délivré de la malédiction</h3>
-       <p> <audio controls>
-              <source src="13.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-13">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">13</span>
+          <span class="req-title">Prière pour être délivré de la malédiction</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/13.mp3" type="audio/mp3">
+            </audio>
   <p>1. Seigneur Jésus, par ton sang, je me libère de toute malédiction qui pèse sur ma vie.</p>
 
 <p>2. Père céleste, brise toute malédiction ancestrale dans ma famille au nom de Jésus.</p>
@@ -1185,13 +1119,18 @@
 <p>49. Que toute malédiction de désespoir et de désillusion soit annulée par la puissance de Jésus.</p>
 
 <p>50. Seigneur, accorde-moi la victoire totale sur toute malédiction qui pèse sur ma vie, au nom de Jésus.</p>
-        
-    </section>
-<section id="boite-14" class="sous-section">
-        <h3>Prière contre l’esprit de pauvreté</h3>
-        <p><audio controls>
-              <source src="14.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-14">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">14</span>
+          <span class="req-title">Prière contre l’esprit de pauvreté</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/14.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, délivre-moi de toute forme de pauvreté dans ma vie, au nom de Jésus.</p>
 
 <p>2. Père céleste, accorde-moi la sagesse pour gérer mes finances avec prudence, au nom de Jésus.</p>
@@ -1291,12 +1230,18 @@
 <p>50. Seigneur, accorde-moi une foi inébranlable en ta provision divine, au nom de Jésus.</p>
 
 <p>Que Dieu vous bénisse et vous guide vers une vie d’abondance et de prospérité.</p>
-    </section>
-<section id="boite-15" class="sous-section">
-        <h3>Prière contre l’esprit de célibat</h3>
-       <p> <audio controls>
-              <source src="15.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-15">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">15</span>
+          <span class="req-title">Prière contre l’esprit de célibat</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/15.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, délivre-moi de tout esprit de célibat qui m’empêche de trouver mon conjoint, au nom de Jésus.</p>
 
 <p>2. Père céleste, accorde-moi la grâce de rencontrer la personne que tu as préparée pour moi, au nom de Jésus.</p>
@@ -1397,12 +1342,18 @@
 <p>50. Seigneur, fais de mon mariage un témoignage de ta fidélité et de ta bonté, au nom de Jésus.</p>
 
 <p>Que Dieu vous bénisse et vous guide vers un mariage heureux et épanouissant.</p>
-    </section>
-<section id="boite-16" class="sous-section">
-        <h3>Prière contre l’esprit de division des foyers</h3>
-        <p><audio controls>
-              <source src="16.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-16">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">16</span>
+          <span class="req-title">Prière contre l’esprit de division des foyers</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/16.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, je te demande de protéger mon foyer de toute division, au nom de Jésus.</p>
 
 <p>2. Père céleste, accorde-nous l’unité et la paix dans notre maison, au nom de Jésus.</p>
@@ -1501,12 +1452,18 @@
 <p>49. Que toute forme de malentendu et de mauvaise communication soit résolue par ton Esprit-Saint, au nom de Jésus.</p>
 
 <p>50. Seigneur, fais de notre foyer un témoignage vivant de ton amour et de ta fidélité, au nom de Jésus.</p>
-    </section>
-<section id="boite-17" class="sous-section">
-        <h3>Requêtes de prière contre la masturbation, l’adultère, la fornication et l’impudicité</h3>
-        <p><audio controls>
-              <source src="17.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-17">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">17</span>
+          <span class="req-title">Requêtes de prière contre la masturbation, l’adultère, la fornication et l’impudicité</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/17.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, délivre-moi de toute forme d’impureté sexuelle, au nom de Jésus.</p>
 
 <p>2. Père céleste, accorde-moi la force de résister à la tentation, au nom de Jésus.</p>
@@ -1646,12 +1603,18 @@
 <p>70. Que toute forme de péché sexuel soit détruite dans ma vie, au nom de Jésus.</p>
 
 <p>Que Dieu vous bénisse et vous guide vers une vie de pureté et de sainteté.</p>
-    </section>
-<section id="boite-18" class="sous-section">
-        <h3>Requêtes de prière contre le chômage sous toutes ses formes.</h3>
-        <p><audio controls>
-              <source src="18.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-18">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">18</span>
+          <span class="req-title">Requêtes de prière contre le chômage sous toutes ses formes</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/18.mp3" type="audio/mp3">
+            </audio>
         
         <p>1. Seigneur, accorde-moi la grâce de trouver un emploi stable et épanouissant, au nom de Jésus.</p>
 
@@ -1753,12 +1716,18 @@
 <p>50. Père, accorde-moi la grâce de trouver un emploi qui corresponde à tes plans pour ma vie, au nom de Jésus.</p>
 
 <p>Que Dieu vous accorde sa faveur et vous guide vers un emploi stable et épanouissant.</p>
-    </section>
-<section id="boite-19" class="sous-section">
-        <h3>Requêtes de prière pour les aspirants au commerce ou ceux qui veulent monter une entreprise</h3>
-        <p><audio controls>
-              <source src="19.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-19">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">19</span>
+          <span class="req-title">Requêtes de prière pour les aspirants au commerce ou ceux qui veulent monter une entreprise</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/19.mp3" type="audio/mp3">
+            </audio>
       <p>1. Seigneur, accorde-moi la sagesse et la connaissance pour lancer mon entreprise, au nom de Jésus.</p>
 
 <p>2. Père céleste, guide-moi dans toutes mes décisions d’affaires, au nom de Jésus.</p>
@@ -1857,12 +1826,18 @@
 <p>49. Que toute forme de mauvaise gestion soit chassée de ma vie commerciale, au nom de Jésus.</p>
 
 <p>50. Père, accorde-moi la grâce de toujours te glorifier à travers le succès de mon entreprise, au nom de Jésus.</p>
-    </section>
-<section id="boite-20" class="sous-section">
-        <h3>Requêtes de prière pour les fiancés </h3>
-       <p> <audio controls>
-              <source src="20.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-20">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">20</span>
+          <span class="req-title">Requêtes de prière pour les fiancés</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/20.mp3" type="audio/mp3">
+            </audio>
          <p>1. Seigneur, accorde-nous la sagesse pour construire une relation fondée sur l’amour et le respect, au nom de Jésus.</p>
 
 <p>2. Père céleste, bénis notre engagement et fais-en une alliance solide et durable, au nom de Jésus.</p>
@@ -1942,12 +1917,18 @@
 <p>39. Que tout esprit de division ou de séparation soit éloigné de notre relation, au nom de Jésus.</p>
 
 <p>40. Père, bénis notre engagement et fais de notre mariage un témoignage de ta bonté et de ton amour, au nom de Jésus.</p>
-    </section>
-<section id="boite-21" class="sous-section">
-        <h3>Requêtes de prière contre le stress</h3>
-        <p><audio controls>
-              <source src="21.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-21">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">21</span>
+          <span class="req-title">Requête de prière contre le stress</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/21.mp3" type="audio/mp3">
+            </audio>
        <p>1. Seigneur, accorde-moi ta paix qui surpasse toute intelligence pour calmer mon esprit troublé.</p>
 <p>2. Père céleste, aide-moi à remettre mes inquiétudes entre tes mains et à ne plus me laisser dominer par le stress.</p>
 <p>3. Seigneur, apprends-moi à me reposer en toi et à trouver refuge sous tes ailes.</p>
@@ -1998,12 +1979,18 @@
 <p>48. Seigneur, remplis mon cœur de ta paix divine qui chasse toute forme d'inquiétude.</p>
 <p>49. Seigneur, donne-moi la clarté mentale nécessaire pour résoudre les situations stressantes efficacement.</p>
 <p>50. Seigneur, apprends-moi à faire confiance à ton plan parfait pour ma vie, même quand je ne comprends pas tout.</p>
-    </section>
-<section id="boite-22" class="sous-section">
-        <h3>Requête de Prière contre la dépression</h3>
-        <p><audio controls>
-              <source src="22.mp3" type="audio/mp3">
-            </audio
+        </div>
+      </article>
+      <article class="req-section" id="boite-22">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">22</span>
+          <span class="req-title">Requêtes de prière contre la dépression</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<p><audio controls data-label="Écouter ces requêtes">
+              <source src="audio/22.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, apporte ta lumière dans mes ténèbres et chasse la tristesse qui m'envahit.</p>
 <p>2. Père céleste, guéris mon cœur brisé et restaure en moi la joie de vivre.</p>
 <p>3. Seigneur, accorde-moi la force de surmonter les pensées négatives qui m'accablent.</p>
@@ -2054,12 +2041,18 @@
 <p>48. Seigneur, donne-moi la persévérance nécessaire pour traverser cette période difficile.</p>
 <p>49. Seigneur, accorde-moi la paix intérieure qui vient de savoir que tu es en contrôle de ma vie.</p>
 <p>50. Seigneur, aide-moi à marcher dans la lumière de ta grâce chaque jour et à vaincre la dépression.</p>
-    </section>
-<section id="boite-23" class="sous-section">
-        <h3>Prières contre l'esprit de mort</h3>
-        <p><audio controls>
-              <source src="23.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-23">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">23</span>
+          <span class="req-title">Prières contre l'esprit de mort</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/23.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, je te demande de me protéger contre tout esprit de mort qui rôde autour de moi.</p>
 <p>2. Père céleste, je rejette l'esprit de mort au nom puissant de Jésus.</p>
 <p>3. Seigneur, éloigne toute pensée de mort et remplace-la par la vie en abondance.</p>
@@ -2110,12 +2103,18 @@
 <p>48. Seigneur, fortifie ma foi en la vie éternelle et aide-moi à vivre pleinement chaque jour.</p>
 <p>49. Seigneur, fais de moi un témoignage vivant de ta puissance contre la mort.</p>
 <p>50. Seigneur, je te rends grâce pour ta protection divine qui éloigne l’esprit de mort et me donne la vie en abondance.</p>
-    </section>
-<section id="boite-24" class="sous-section">
-        <h3>Requêtes de Prière pour briser les liens de malheur, de precarité, de souffrance et d'amertume</h3>
-       <p> <audio controls>
-              <source src="24.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-24">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">24</span>
+          <span class="req-title">Requêtes de prière pour briser les liens de malheur, de précarité, de souffrance et d'amertume</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/24.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, brise tout lien de malheur qui entrave ma vie et accorde-moi ta bénédiction.</p>
 <p>2. Seigneur, délivre-moi de la précarité et accorde-moi la prospérité selon ta volonté.</p>
 <p>3. Seigneur, libère-moi de la souffrance et remplis ma vie de ta paix et de ta joie.</p>
@@ -2186,12 +2185,18 @@
 <p>68. Seigneur, éloigne de moi l’amertume et renouvelle mon cœur avec la paix et l’amour divin.</p>
 <p>69. Seigneur, brise les cycles de malheur et accorde-moi une vie remplie de ta grâce et de ta prospérité.</p>
 <p>70. Seigneur, délivre-moi de la précarité et donne-moi une stabilité durable dans tous les aspects de ma vie.</p>
-    </section>
-<section id="boite-25" class="sous-section">
-        <h3>requêtes de prière contre les liens de famille</h3>
-        <p><audio controls>
-              <source src="25.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-25">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">25</span>
+          <span class="req-title">Requêtes de prière contre les liens de famille</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/25.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, libère ma famille de tout lien spirituel négatif qui affecte notre unité.</p>
 <p>2. Père céleste, brise tout lien de malédiction hérité de générations précédentes dans ma famille.</p>
 <p>3. Seigneur, que tout lien de désunion entre les membres de ma famille soit détruit par ta puissance.</p>
@@ -2262,12 +2267,18 @@
 <p>68. Seigneur, que ta paix règne dans notre foyer et que tout esprit de division soit chassé.</p>
 <p>69. Seigneur, donne-nous la capacité de résoudre nos différends avec amour et compréhension.</p>
 <p>70. Seigneur, renouvelle chaque cœur familial et brise tout lien de destruction par ta grâce infinie.</p>
-    </section>
-<section id="boite-26" class="sous-section">
-        <h3>Prière pour demander la grâce de Dieu dans sa vie, dans les affaires, le commerce et les projets.</h3>
-       <p> <audio controls>
-              <source src="26.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-26">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">26</span>
+          <span class="req-title">Prière pour demander la grâce de Dieu dans sa vie, dans les affaires, le commerce et les projets</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/26.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, accorde-moi ta grâce divine en Jésus-Christ pour guider ma vie selon ta volonté.</p>
 <p>2. Seigneur Jésus, que ta grâce se manifeste dans tous les aspects de ma vie et me conduise vers le succès.</p>
 <p>3. Seigneur, accorde-moi la sagesse nécessaire pour gérer mes affaires avec ta grâce et ton discernement.</p>
@@ -2338,12 +2349,18 @@
 <p>68. Seigneur, par ta grâce, accorde-moi la force de surmonter toute adversité dans mes projets.</p>
 <p>69. Seigneur, que ta grâce manifeste en Jésus-Christ fasse briller ma vie et mes affaires.</p>
 <p>70. Seigneur, accorde-moi ta grâce pour prospérer dans mes affaires et voir tes bénédictions se manifester.</p>
-    </section>
-<section id="boite-27" class="sous-section">
-        <h3>Requêtes de prière pour l'excellence</h3>
-        <p><audio controls>
-              <source src="27.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-27">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">27</span>
+          <span class="req-title">Requêtes de prière pour l'excellence</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/27.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, accorde-moi l'esprit d'excellence dans tout ce que je fais.</p>
 <p>2. Père, que ta sagesse me guide vers l'excellence dans mes études/travail.</p>
 <p>3. Donne-moi la force et la persévérance pour exceller dans les moments difficiles.</p>
@@ -2394,13 +2411,18 @@
 <p>48. Seigneur, que ton Esprit d'excellence imprègne toute ma vie professionnelle.</p>
 <p>49. Père, aide-moi à exceller dans ma foi et ma marche avec toi.</p>
 <p>50. Que l'excellence soit un témoignage puissant de ta présence en moi, Seigneur.</p>
-      
-    </section>
-<section id="boite-28" class="sous-section">
-        <h3>Requêtes de prière sur l'esprit de créativité et d'ingéniosité</h3>
-        <p><audio controls>
-              <source src="28.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-28">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">28</span>
+          <span class="req-title">Requêtes de prière sur l'esprit de créativité et d'ingéniosité</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/28.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, accorde-moi un esprit de créativité pour résoudre les défis de ma vie.</p>
 <p>2. Père, que ton Esprit m’inspire des idées ingénieuses et innovantes.</p>
 <p>3. Seigneur, développe en moi un esprit d’ingéniosité pour accomplir mes projets.</p>
@@ -2471,12 +2493,18 @@
 <p>68. Que ton Esprit me pousse à dépasser les limites de la pensée traditionnelle avec créativité.</p>
 <p>69. Seigneur, inspire-moi des projets qui sortent de l’ordinaire et qui impactent le monde.</p>
 <p>70. Père, donne-moi un esprit d’audace et d’innovation pour accomplir des choses inédites.</p>
-    </section>
-<section id="boite-29" class="sous-section">
-        <h3>Requêtes contre l'esprit de peur</h3>
-        <p><audio controls>
-              <source src="29.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-29">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">29</span>
+          <span class="req-title">Requêtes contre l'esprit de peur</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/29.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, libère-moi de l’esprit de peur qui me paralyse.</p>
 <p>2. Père, je refuse de vivre sous l'emprise de la peur, accorde-moi ta paix.</p>
 <p>3. Seigneur, remplace la peur dans mon cœur par ta confiance et ton amour.</p>
@@ -2527,12 +2555,18 @@
 <p>48. Père, que ma foi en toi soit plus forte que toute peur qui tente de m’envahir.</p>
 <p>49. Seigneur, accorde-moi un esprit de confiance inébranlable en ta puissance.</p>
 <p>50. Père, que ta paix remplisse mon cœur et chasse définitivement l’esprit de peur.</p>
-    </section>
-<section id="boite-30" class="sous-section">
-        <h3>Requêtes de prière pour se libérer des addictions</h3>
-        <p><audio controls>
-              <source src="30.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-30">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">30</span>
+          <span class="req-title">Requêtes de prière pour se libérer des addictions</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/30.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, libère-moi de toute forme d’addiction qui m’empêche de vivre selon ta volonté.</p>
 <p>2. Père, accorde-moi la force de résister aux tentations liées à mon addiction.</p>
 <p>3. Seigneur, je rejette tout attachement aux choses qui me contrôlent.</p>
@@ -2583,12 +2617,18 @@
 <p>48. Père, fortifie mon esprit et mon corps pour que je puisse combattre les effets de l’addiction.</p>
 <p>49. Seigneur, remplis mon cœur de ta présence pour que je sois libre de toute forme de dépendance.</p>
 <p>50. Père, je te remets mon avenir, confiant que tu me libères totalement de cette addiction, au nom de Jésus.</p>
-    </section>
-<section id="boite-31" class="sous-section">
-        <h3>Requêtes de Prière pour renverser les autels sataniques</h3>
-        <p><audio controls>
-              <source src="31.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-31">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">31</span>
+          <span class="req-title">Requêtes de prière pour renverser les autels sataniques</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/31.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, détruis tous les autels sataniques dressés contre ma vie, au nom de Jésus.</p>
 <p>2. Père, que chaque autel maléfique établi dans ma famille soit consumé par le feu du Saint-Esprit.</p>
 <p>3. Seigneur, que les sacrifices offerts sur ces autels contre moi soient annulés, au nom de Jésus.</p>
@@ -2659,12 +2699,18 @@
 <p>68. Père, détruis les autels qui visent à voler ma joie, au nom de Jésus.</p>
 <p>69. Seigneur, brise les autels qui retiennent mes percées spirituelles.</p>
 <p>70. Père, libère-moi de tout lien spirituel établi sur un autel de malédiction.</p>
-    </section>
-<section id="boite-32" class="sous-section">
-        <h3>Prière pour la guérison divine</h3>
-        <p><audio controls>
-              <source src="32.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-32">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">32</span>
+          <span class="req-title">Prière pour la guérison divine</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/32.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, par tes meurtrissures, je proclame la guérison dans mon corps, au nom de Jésus.</p>
 <p>2. Père, étends ta main de guérison sur chaque cellule de mon corps.</p>
 <p>3. Seigneur, restaure ma santé physique, mentale et spirituelle, au nom de Jésus.</p>
@@ -2715,12 +2761,18 @@
 <p>48. Père, libère-moi de toute douleur dans mes muscles, mes nerfs et mes os, au nom de Jésus.</p>
 <p>49. Seigneur, restaure ma santé émotionnelle et guéris-moi des blessures du passé.</p>
 <p>50. Père, je déclare que par ta puissance, je suis entièrement guéri et restauré, au nom de Jésus.</p>
-    </section>
-<section id="boite-33" class="sous-section">
-        <h3>Prière pour le choix du conjoint (e)</h3>
-        <p><audio controls>
-              <source src="33.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-33">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">33</span>
+          <span class="req-title">Prière pour le choix du conjoint (e)</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/33.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, guide-moi dans le choix du conjoint selon ta volonté, au nom de Jésus.</p>
 <p>2. Père, donne-moi la sagesse et le discernement pour reconnaître la personne que tu as préparée pour moi.</p>
 <p>3. Seigneur, que ta lumière éclaire mon cœur afin que je ne sois pas trompé(e) dans mes choix.</p>
@@ -2771,12 +2823,18 @@
 <p>48. Père, je demande ta bénédiction sur chaque étape de ma future relation amoureuse.</p>
 <p>49. Seigneur, garde-moi dans ta protection divine jusqu’à ce que je rencontre mon conjoint(e), au nom de Jésus.</p>
 <p>50. Père, que ton amour et ta paix soient le fondement de mon futur mariage, au nom de Jésus.</p>
-    </section>
-<section id="boite-34" class="sous-section">
-        <h3>Prière pour la préparation de son mariage (Cérémonie de dote, mariage civil et la bénédiction nuptiale).</h3>
-       <p> <audio controls>
-              <source src="34.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-34">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">34</span>
+          <span class="req-title">Prière pour la préparation de son mariage (cérémonie de dot, mariage civil et la bénédiction nuptiale)</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/34.mp3" type="audio/mp3">
+            </audio>
         <h4>I. Requêtes de prière pour la cérémonie de dot </h4>
 
 <p>1. Seigneur, que ta présence divine accompagne chaque étape de la cérémonie de dot.</p>
@@ -2884,12 +2942,18 @@
 <p>28. Père, que tout ce que nous ferons à partir de cette cérémonie soit pour ta gloire.</p>
 <p>29. Seigneur, que ta paix règne toujours dans notre foyer.</p>
 <p>30. Père, accorde-nous une vie remplie de ta grâce et de ta présence.</p>
-    </section>
-<section id="boite-35" class="sous-section">
-        <h3>Requêtes de prière pour demander la providence divine </h3>
-        <p><audio controls>
-              <source src="35.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-35">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">35</span>
+          <span class="req-title">Requêtes de prière pour demander la providence divine</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/35.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, je te demande de pourvoir à tous mes besoins, selon ta richesse et ta gloire.</p>
 <p>2. Père céleste, ouvre les cieux et répands ta bénédiction sur ma vie, en pourvoyant à mes besoins matériels et spirituels.</p>
 <p>3. Seigneur, je te prie de manifester ta providence dans les moments d'incertitude et de manque.</p>
@@ -2940,12 +3004,18 @@
 <p>48. Père, pourvois à mes besoins spirituels afin que je grandisse dans la foi et la connaissance de ta parole.</p>
 <p>49. Seigneur, que ta main de providence me soutienne et m'encourage dans les moments de doute.</p>
 <p>50. Père, que ta bénédiction abonde dans ma vie, m'accordant ta provision dans toutes mes entreprises.</p>
-    </section>
-<section id="boite-36" class="sous-section">
-        <h3>Prières pour l'ouverture des Portes fermées</h3>
-        <p><audio controls>
-              <source src="36.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-36">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">36</span>
+          <span class="req-title">Prières pour l'ouverture des portes fermées</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/36.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, ouvre toutes les portes fermées de bénédictions dans ma vie, au nom de Jésus.</p>
 <p>2. Père céleste, que toutes les opportunités fermées soient restaurées dans ma vie, au nom de Jésus.</p>
 <p>3. Seigneur, accorde-moi la faveur qui ouvre les portes fermées, au nom de Jésus.</p>
@@ -2996,12 +3066,18 @@
 <p>48. Seigneur, ouvre les portes des réponses rapides à mes prières.</p>
 <p>49. Que toute porte fermée par la pauvreté soit ouverte par ta prospérité, au nom de Jésus.</p>
 <p>50. Seigneur, ouvre les portes de l’accomplissement de mon destin prophétique.</p>
-    </section>
-<section id="boite-37" class="sous-section">
-        <h3>Requêtes de prière pour la promotion</h3>
-        <p><audio controls>
-              <source src="37.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-37">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">37</span>
+          <span class="req-title">Requêtes de prière pour la promotion</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/37.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, accorde-moi la faveur divine pour accéder à ma promotion, au nom de Jésus.</p>
 <p>2. Père, que toute résistance contre ma promotion soit brisée, au nom de Jésus.</p>
 <p>3. Seigneur, ouvre les portes de la promotion dans ma vie professionnelle.</p>
@@ -3054,12 +3130,18 @@
 <p>50. Père, que toute porte fermée à ma promotion soit ouverte maintenant par ta grâce, au nom de Jésus.</p>
 
 <p>Que ces requêtes servent à invoquer la faveur divine pour ta promotion et ta progression.</p>
-    </section>
-<section id="boite-38" class="sous-section">
-        <h3>Requêtes de prière contre les divisions dans les relations de couple </h3>
-        <p><audio controls>
-              <source src="38.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-38">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">38</span>
+          <span class="req-title">Requêtes de prière contre les divisions dans les relations de couple</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/38.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, apporte la paix et l'harmonie dans notre relation de couple, au nom de Jésus.</p>
 <p>2. Père, que toute forme de division entre nous soit renversée par ta grâce.</p>
 <p>3. Seigneur, restaure la confiance et l’amour dans notre relation, au nom de Jésus.</p>
@@ -3112,12 +3194,18 @@
 <p>50. Père, que ton amour soit la fondation de notre relation et qu’aucune force ne puisse nous diviser, au nom de Jésus.</p>
 
 <p>Que ces prières aident à rétablir l'harmonie, l'amour et la paix dans les relations de couple.</p>
-    </section>
-<section id="boite-39" class="sous-section">
-        <h3>Prières pour ramener le premier amour dans le couple</h3>
-        <p><audio controls>
-              <source src="39.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-39">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">39</span>
+          <span class="req-title">Prières pour ramener le premier amour dans le couple</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/39.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, restaure le premier amour dans notre couple, au nom de Jésus.</p>
 <p>2. Père, que la flamme de l’amour initial entre nous soit ravivée.</p>
 <p>3. Seigneur, aide-nous à retrouver la passion que nous avions au début de notre relation.</p>
@@ -3170,12 +3258,18 @@
 <p>50. Père, que notre amour soit toujours frais, dynamique et grandissant, au nom de Jésus.</p>
 
 <p>Ces requêtes de prière sont conçues pour aider à raviver le premier amour et renouveler l’intimité et la tendresse dans votre relation.</p>
-    </section>
-<section id="boite-40" class="sous-section">
-        <h3>Requêtes de prière pour le retour d'un(e) partenaire qui nous a abandonné(e) </h3>
-        <p><audio controls>
-              <source src="40.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-40">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">40</span>
+          <span class="req-title">Requêtes de prière pour le retour d'un(e) partenaire qui nous a abandonné(e)</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/40.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, je te prie de toucher le cœur de mon partenaire et de lui donner le désir de revenir.</p>
 <p>2. Père, que ton amour réchauffe son cœur et restaure notre relation.</p>
 <p>3. Seigneur, enlève toute barrière émotionnelle ou spirituelle qui le/la retient loin de moi.</p>
@@ -3228,12 +3322,18 @@
 <p>50. Père, fais en sorte que nous revenions plus forts et plus unis après cette épreuve, au nom de Jésus.</p>
 
 <p>Ces requêtes de prière visent à restaurer l’union et à ramener la paix, l’amour et l’harmonie dans votre relation.</p>
-    </section>
-<section id="boite-41" class="sous-section">
-        <h3>Requêtes de prière pour les couples au bord du divorce</h3>
-        <p><audio controls>
-              <source src="41.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-41">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">41</span>
+          <span class="req-title">Requêtes de prière pour les couples au bord du divorce</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/41.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, restaure notre amour avant qu’il ne soit trop tard.</p>
 <p>2. Père, ouvre les yeux de mon partenaire pour voir la valeur de notre mariage.</p>
 <p>3. Seigneur, apaise nos cœurs en colère et remplis-les de paix.</p>
@@ -3286,12 +3386,18 @@
 <p>50. Père, que notre mariage soit restauré pour ta gloire et ton honneur.</p>
 
 <p>Ces requêtes de prière sont conçues pour aider les couples à surmonter les défis qui les poussent vers le divorce, en recherchant la restauration, la paix et l'amour dans leur relation.</p>
-    </section>
-<section id="boite-42" class="sous-section">
-        <h3>Prière pour la paix dans son pays</h3>
-        <p><audio controls>
-              <source src="42.mp3" type="audio/mp3">
-            </audio
+        </div>
+      </article>
+      <article class="req-section" id="boite-42">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">42</span>
+          <span class="req-title">Prière pour la paix dans son pays</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<p><audio controls data-label="Écouter ces requêtes">
+              <source src="audio/42.mp3" type="audio/mp3">
+            </audio>
          <p>1. Seigneur, accorde la paix à notre pays, au nom de Jésus.</p>
 <p>2. Père, que ta paix règne dans chaque coin de notre nation.</p>
 <p>3. Seigneur, apaise toute forme de conflit dans notre pays.</p>
@@ -3364,12 +3470,18 @@
 <p>70. Père, que notre nation demeure unie dans la paix et la prospérité pour ta gloire.</p>
 
 <p>Ces requêtes de prière sont centrées sur la paix, la réconciliation et la stabilité dans votre pays, demandant l'intervention divine dans chaque aspect de la vie nationale.</p>
-    </section>
-<section id="boite-43" class="sous-section">
-        <h3>Requêtes de prière pour le déblocage des papiers de voyage</h3>
-        <p><audio controls>
-              <source src="43.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-43">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">43</span>
+          <span class="req-title">Requêtes de prière pour le déblocage des papiers de voyage</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/43.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, accorde-moi la faveur dans le traitement de mes papiers de voyage.</p>
 <p>2. Père, fais que chaque document nécessaire soit préparé rapidement et efficacement.</p>
 <p>3. Seigneur, que tout obstacle administratif soit levé, au nom de Jésus.</p>
@@ -3422,12 +3534,18 @@
 <p>50. Père, que ma foi en toi soit un moteur pour persévérer, au nom de Jésus.</p>
 
 <p>Ces requêtes de prière visent à demander la faveur divine pour le déblocage des papiers de voyage et à apporter du soutien dans le processus administratif.</p>
-    </section>
-<section id="boite-44" class="sous-section">
-        <h3>Requêtes de prière pour les projets de voyages</h3>
-        <p><audio controls>
-              <source src="44.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-44">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">44</span>
+          <span class="req-title">Requêtes de prière pour les projets de voyages</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/44.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, guide mes pas tout au long de ce voyage.</p>
 <p>2. Père, protège-moi des dangers sur la route et en voyage.</p>
 <p>3. Seigneur, accorde-moi la sagesse pour planifier ce voyage efficacement.</p>
@@ -3480,12 +3598,18 @@
 <p>50. Père, que tout ce que je fais en voyage te glorifie, au nom de Jésus.</p>
 
 <p>Ces requêtes de prière visent à apporter bénédictions, protection et guidance dans vos projets de voyages.</p>
-    </section>
-<section id="boite-45" class="sous-section">
-        <h3>Prière pour être un bon leader</h3>
-        <p><audio controls>
-              <source src="45.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-45">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">45</span>
+          <span class="req-title">Prière pour être un bon leader</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/45.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, accorde-moi la sagesse nécessaire pour diriger avec intégrité.</p>
 <p>2. Père, aide-moi à servir les autres avec humilité et compassion.</p>
 <p>3. Seigneur, que mes décisions soient guidées par ta volonté.</p>
@@ -3536,12 +3660,18 @@
 <p>48. Père, aide-moi à être un agent de changement et d'amélioration continue.</p>
 <p>49. Seigneur, que je sois un phare de lumière et d'espoir pour ceux que je dirige.</p>
 <p>50. Accorde-moi la sagesse de toujours rechercher le bien commun, au nom de Jésus.</p>
-    </section>
-<section id="boite-46" class="sous-section">
-        <h3>Prière pour être un bon mari</h3>
-        <p><audio controls>
-              <source src="46.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-46">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">46</span>
+          <span class="req-title">Prière pour être un bon mari</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/46.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, donne-moi la sagesse pour aimer ma femme comme Christ aime l'Église.</p>
 <p>2. Père, aide-moi à être un soutien constant et fiable pour ma femme.</p>
 <p>3. Seigneur, accorde-moi la patience pour comprendre ses besoins et ses sentiments.</p>
@@ -3592,12 +3722,18 @@
 <p>48. Que je sache créer un foyer où l'amour et le respect règnent, au nom de Jésus.</p>
 <p>49. Seigneur, aide-moi à toujours voir le meilleur en ma femme et à l'encourager à briller.</p>
 <p>50. Père, que notre mariage soit un témoignage de ta grâce et de ton amour.</p>
-    </section>
-<section id="boite-47" class="sous-section">
-        <h3>Prières pour être une bonne femme</h3>
-        <p><audio controls>
-              <source src="47.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-47">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">47</span>
+          <span class="req-title">Prières pour être une bonne femme</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/47.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, accorde-moi la sagesse pour soutenir mon mari avec amour.</p>
 <p>2. Père, aide-moi à être un soutien constant et fiable pour ma famille.</p>
 <p>3. Seigneur, donne-moi la patience pour comprendre les besoins de mon mari.</p>
@@ -3648,12 +3784,18 @@
 <p>48. Que je sache créer un foyer où l'amour et le respect règnent, au nom de Jésus.</p>
 <p>49. Seigneur, aide-moi à toujours voir le meilleur en mon mari et à l'encourager à briller.</p>
 <p>50. Père, que notre mariage soit un témoignage de ta grâce et de ton amour.</p>
-    </section>
-<section id="boite-48" class="sous-section">
-        <h3>Prières pour être des hommes et femmes intègres</h3>
-        <p><audio controls>
-              <source src="48.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-48">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">48</span>
+          <span class="req-title">Prières pour être des hommes et femmes intègres</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/48.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, accorde-moi la force de vivre selon des principes d'intégrité.</p>
 <p>2. Père, aide-moi à être honnête dans toutes mes actions et paroles.</p>
 <p>3. Seigneur, remplis mon cœur de la vérité et de la transparence.</p>
@@ -3704,12 +3846,18 @@
 <p>48. Que ma vie soit un témoignage de ta bonté et de ta vérité, au nom de Jésus.</p>
 <p>49. Seigneur, aide-moi à rechercher la réconciliation plutôt que la division.</p>
 <p>50. Père, que mon intégrité soit une lumière pour ceux qui m'entourent.</p>
-    </section>
-<section id="boite-49" class="sous-section">
-        <h3>Prières pour avoir la sagesse et l'intelligence dans les études</h3>
-        <p><audio controls>
-              <source src="49.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-49">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">49</span>
+          <span class="req-title">Prières pour avoir la sagesse et l'intelligence dans les études</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/49.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, accorde-moi la sagesse pour comprendre et assimiler mes leçons.</p>
 <p>2. Père, aide-moi à être discipliné dans mes études et mes devoirs.</p>
 <p>3. Seigneur, remplis mon esprit de clarté et de concentration.</p>
@@ -3760,12 +3908,18 @@
 <p>48. Seigneur, accorde-moi la capacité d'apprendre rapidement et efficacement.</p>
 <p>49. Père, aide-moi à garder une attitude de gratitude pour chaque opportunité d'apprentissage.</p>
 <p>50. Seigneur, que mes études soient un moyen de glorifier ton nom, au nom de Jésus.</p>
-    </section>
-<section id="boite-50" class="sous-section">
-        <h3>Prières pour la préparation des examens et concours</h3>
-        <p><audio controls>
-              <source src="50.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-50">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">50</span>
+          <span class="req-title">Prières pour la préparation des examens et concours</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/50.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, accorde-moi la paix intérieure pendant ma préparation aux examens.</p>
 <p>2. Père, aide-moi à me concentrer et à rester motivé dans mes études.</p>
 <p>3. Seigneur, remplis mon esprit de clarté pour assimiler les connaissances nécessaires.</p>
@@ -3815,12 +3969,19 @@
 <p>47. Seigneur, que mes efforts soient récompensés par des résultats positifs.</p>
 <p>48. Que je puisse toujours rechercher la vérité et l'excellence dans mes études, au nom de Jésus.</p>
 <p>49. Seigneur, aide-moi à remettre tout entre tes mains, en confiance.</p>
-<p>Père, que ma préparation soit une occasion de grandir dans ma foi et ma connaissance.</p>  </section>
-      <section id="boite-51" class="sous-section">
-        <h3>Prière pour remercier le Seigneur pour ce qu'il est pour nous</h3>
-        <p><audio controls>
-              <source src="51.mp3" type="audio/mp3">
-            </audio</p>
+<p>Père, que ma préparation soit une occasion de grandir dans ma foi et ma connaissance.</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-51">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">51</span>
+          <span class="req-title">Prière pour remercier le Seigneur pour ce qu'il est pour nous</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/51.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, je te remercie pour ta présence constante dans ma vie.</p>
 <p>2. Père, merci pour ton amour inconditionnel qui me soutient chaque jour.</p>
 <p>3. Seigneur, je te rends grâce pour ta bonté et ta miséricorde infinies.</p>
@@ -3871,12 +4032,18 @@
 <p>48. Merci, Seigneur, pour ta main protectrice sur ma vie.</p>
 <p>49. Père, je te remercie pour le sens que tu donnes à ma vie.</p>
 <p>50. Seigneur, merci pour tout ce que tu es et pour tout ce que tu fais pour moi.</p>
-        </section>
-<section id="boite-52" class="sous-section">
-        <h3>Requêtes d'adoration et de louange à l'Éternel Dieu </h3>
-        <p><audio controls>
-              <source src="52.mp3" type="audio/mp3">
-            </audio</p>
+        </div>
+      </article>
+      <article class="req-section" id="boite-52">
+        <button class="req-head" type="button" aria-expanded="false">
+          <span class="num">52</span>
+          <span class="req-title">Requêtes d'adoration et de louange à l'Éternel Dieu</span>
+          <span class="acc-icon" aria-hidden="true"></span>
+        </button>
+        <div class="req-body prose">
+<audio controls data-label="Écouter ces requêtes">
+              <source src="audio/52.mp3" type="audio/mp3">
+            </audio>
         <p>1. Seigneur, je te loue pour ta grandeur et ta majesté.</p>
 <p>2. Éternel, merci pour ta fidélité éternelle envers nous.</p>
 <p>3. Je t'adore, Seigneur, pour ton amour inconditionnel.</p>
@@ -3927,145 +4094,65 @@
 <p>48. Dieu, merci pour le chemin que tu traces devant moi.</p>
 <p>49. Seigneur, je te loue pour ta présence joyeuse dans ma vie.</p>
 <p>50. Éternel, je te rends gloire pour tout ce que tu es et tout ce que tu fais.</p>
-</section>
-<section id="boite-53" class="sous-section">
-        <h3>priere 53</h3>
-        <p>Contenu de la prière 50.</p> 
-        </section>
-<section id="boite-54" class="sous-section">
-        <h3>priere 54</h3>
-        <p>Contenu de la prière 50.</p>
-    </section>
-        <section class="introduction"
-        </section>
-        
-        <section class="fonctionnalites">
-            <h2>Nos Fonctionnalités</h2>
-            <ul>
-  
-                 <!-- 2. Voir les prières des autres -->
-    <div class="fonctionnalite">
-        <h3>Voir les prières des autres</h3>
-        <div class="boite-prieres">
-            <div class="priere">
-                <p class="auteur">Anonyme:</p>
-                <p>Que Dieu m'aide dans mes études.</p>
-            </div>
-            <div class="priere">
-                <p class="auteur">Jean Dupont:</p>
-                <p>Priez pour ma guérison.</p>
-            </div>
-            <div class="priere">
-    <p class="auteur">Prière en ligne:</p>
-    <p>Prions pour le développement de notre communauté.</p>
-</div>
-<div class="priere">
-    <p class="auteur">Anonyme:</p>
-    <p>Prions pour les candidats aux divers examens.</p>
-</div>
-<div class="priere">
-    <p class="auteur">Femmes enceintes:</p>
-    <p>Prions que le Seigneur protège et sécurise toutes les femmes enceintes.</p>
-</div>
-<div class="priere">
-    <p class="auteur">Chômeur:</p>
-    <p>Prions que le Seigneur accorde du travail à ceux qui sont dans le besoin.</p>
-</div>
-<div class="priere">
-    <p class="auteur">Célibataire:</p>
-    <p>Prions que le Seigneur donne le bon compagnon aux aspirants.</p>
-</div>
-<div class="priere">
-    <p class="auteur">Affligés:</p>
-    <p>Prions pour ceux qui pleurent et sont inconsolables.</p>
-</div>
-<div class="priere">
-    <p class="auteur">Prisonniers spirituels:</p>
-    <p>Prions pour ceux qui sont sous l'emprise de la malédiction, que le Seigneur les affranchisse.</p>
-</div>
-<div class="priere">
-    <p class="auteur">Prière en ligne:</p>
-    <p>Prions pour les membres de nos familles qui n'ont pas encore donné leur vie à Jésus.</p>
-</div>
-<div class="priere">
-    <p class="auteur">Couples:</p>
-    <p>Prions pour ceux qui préparent leur projet de mariage.</p>
-</div>
-<div class="priere">
-    <p class="auteur">Commerçants:</p>
-    <p>Prions pour ceux qui voient une baisse dans leur activité commerciale.</p>
-</div>
-</section>
-
-    <div id="a-propos">
-    <h2>À propos</h2>
-    <table class="tableau-a-propos">
-        <thead>
-            <tr>
-                <th>Aspect</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><h4>Mission</h4></td>
-                <td><h5>Servir la communauté avec amour et dévotion.</h5></td>
-            </tr>
-            <tr>
-                <td><h4>Vision</h4></td>
-                <td><h5>Créer un espace de prière et de soutien spirituel.</h5></td>
-            </tr>
-            <tr>
-                <td><h4>Valeurs</h4></td>
-                <td><h5>Intégrité, Foi, Amour, et Engagement.<h5></h5></td>
-            </tr>
-            <!-- Ajoute d'autres lignes selon besoin -->
-        </tbody>
-    </table>
-</div><section class="a-propos-content">
-</section>
-<div id="contact">
-    <h2>Contactez-nous</h2>
-    <form id="contact-form" class="contact-form">
-        <label for="name">Nom :</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Envoyer</button>
-    </form>
-
-    <div class="contact-info">
-        <h3>Informations de contact</h3>
-        <p><h4>Téléphone : +229 0164013074</h4></p>
-        <p><h4>Email:</h4> <a href="mailto:enlignepriere@gmail.com"><h4>enlignepriere@gmail.com</h4></a></p>
-        <p><h4>Adresse : Cotonou, Bénin</h4></p>
+        </div>
+      </article>
+      </div>
+      <p class="no-result" id="no-result" hidden>Aucune requête ne correspond à votre recherche. Essayez un autre mot.</p>
     </div>
-</div>
-        <section id="Contacts">
-    <h2>Contacts</h2>
-    <div class="Contact-info">
-        <p><h3>Discutez avec nous, ou rejoignez notre forum WhatsApp :</h3></p>
-        <ul>
-            <li><strong>Email :</strong> <a href="mailto:enlignepriere@gmail.com"><h3>Cliquer pour Email </h3></a></li>
-            <li><strong>WhatsApp :</strong> <a href="https://wa.me/+2290164013074" target="_blank"><h3>Cliquez ici pour discuter sur WhatsApp</h3></a></li>
-            <li><strong>Forum Whatsapp :</strong> <a href="https://chat.whatsapp.com/JnEG13M6Zpk2LB85yLtRE8" target="_blank"><h3>Cliquez ici pour rejoindre notre forum WhatsApp</h3></a></li>
-        </ul>
-    </div>
-</section>
-            </div>
-                    </section>
-    </main>
+  </section>
 
-    <footer>
-        <p><h5>&copy; 2024 Prière en Ligne. Tous droits réservés.</h5></p>
-    </footer>
-    
- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="mise.js" defer></script>
+  <section class="section sujets-band">
+    <div class="wrap">
+      <div class="section-head center">
+        <p class="eyebrow">Communauté</p>
+        <h2>Prions les uns pour les autres</h2>
+        <p class="lead">Quelques sujets confiés à la communauté de Prière en Ligne.</p>
+      </div>
+      <div class="sujets">
+        <div class="sujet"><p class="auteur">Anonyme</p><p>Que Dieu m'aide dans mes études.</p></div>
+        <div class="sujet"><p class="auteur">Prière en ligne</p><p>Prions pour le développement de notre communauté.</p></div>
+        <div class="sujet"><p class="auteur">Anonyme</p><p>Prions pour les candidats aux divers examens.</p></div>
+        <div class="sujet"><p class="auteur">Femmes enceintes</p><p>Prions que le Seigneur protège et sécurise toutes les femmes enceintes.</p></div>
+        <div class="sujet"><p class="auteur">Chômeur</p><p>Prions que le Seigneur accorde du travail à ceux qui sont dans le besoin.</p></div>
+        <div class="sujet"><p class="auteur">Célibataire</p><p>Prions que le Seigneur donne le bon compagnon aux aspirants.</p></div>
+        <div class="sujet"><p class="auteur">Affligés</p><p>Prions pour ceux qui pleurent et sont inconsolables.</p></div>
+        <div class="sujet"><p class="auteur">Prisonniers spirituels</p><p>Prions pour ceux qui sont sous l'emprise de la malédiction, que le Seigneur les affranchisse.</p></div>
+        <div class="sujet"><p class="auteur">Prière en ligne</p><p>Prions pour les membres de nos familles qui n'ont pas encore donné leur vie à Jésus.</p></div>
+        <div class="sujet"><p class="auteur">Couples</p><p>Prions pour ceux qui préparent leur projet de mariage.</p></div>
+        <div class="sujet"><p class="auteur">Commerçants</p><p>Prions pour ceux qui voient une baisse dans leur activité commerciale.</p></div>
+      </div>
+      <div class="btn-row"><a class="btn" href="appel.html">Confier un sujet de prière</a></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><img src="img/logo-rond.jpg" alt="" width="40" height="40"><span>Prière <em>en Ligne</em></span></a>
+        <p>Un espace dédié à la prière, à la méditation de la Parole et à la communion avec Dieu.</p>
+      </div>
+      <div>
+        <h4>Explorer</h4>
+        <a href="programmes.html">Programmes de jeûne</a>
+        <a href="mise.html">Bibliothèque de requêtes</a>
+        <a href="game.html">Jeux bibliques</a>
+      </div>
+      <div>
+        <h4>Nous rejoindre</h4>
+        <a href="https://chat.whatsapp.com/JnEG13M6Zpk2LB85yLtRE8" target="_blank" rel="noopener">Groupe WhatsApp</a>
+        <a href="https://wa.me/2290164013074" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+        <a href="mailto:enlignepriere@gmail.com">enlignepriere@gmail.com</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span data-year>2026</span> Prière en Ligne · Tous droits réservés</span>
+      <span>Cotonou, Bénin</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+<script src="mise.js"></script>
 </body>
 </html>
