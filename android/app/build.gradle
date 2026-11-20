@@ -1,0 +1,49 @@
+plugins { id "com.android.application" }
+
+def versionCodeCi = (System.getenv("APK_VERSION_CODE") ?: "1") as int
+def versionNameCi = System.getenv("APK_VERSION_NAME") ?: "1.0"
+
+android {
+    namespace "net.priereenligne.app"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "net.priereenligne.app"
+        minSdk 24
+        targetSdk 34
+        versionCode versionCodeCi
+        versionName versionNameCi
+    }
+
+    // Clé de signature privée fournie par les secrets GitHub (voir README) ; à défaut, clé de test d'Android.
+    def keystore = System.getenv("ANDROID_KEYSTORE_FILE")
+    def hasKey = keystore && file(keystore).exists()
+    signingConfigs {
+        if (hasKey) {
+            release {
+                storeFile file(keystore)
+                storePassword System.getenv("ANDROID_KEYSTORE_PASSWORD")
+                keyAlias System.getenv("ANDROID_KEY_ALIAS")
+                keyPassword System.getenv("ANDROID_KEY_PASSWORD")
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig hasKey ? signingConfigs.release : signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    androidResources {
+        // Les fichiers audio et images sont déjà compressés : stockés tels quels (lecture directe + avance rapide)
+        noCompress += ["mp3", "jpg", "jpeg", "png", "woff2", "webp"]
+        ignoreAssetsPattern "!.svn:!.git:!CVS:!thumbs.db:!picasa.ini:!*~"
+    }
+}
