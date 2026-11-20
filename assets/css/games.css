@@ -22,13 +22,13 @@
   margin: 0; padding: 7px 14px; border-radius: 999px; background: var(--ivory); border: 1px solid var(--line);
   font-size: .85rem; font-weight: 500; color: var(--muted);
 }
-#game-info strong { color: var(--night); font-weight: 600; }
-#game-info span span, #game-info p span, #life-count, #score-count, #answered-count, #wrong-count { color: var(--night); font-weight: 600; }
+#game-info strong { color: var(--night); font-weight: 700; }
+#game-info span span, #game-info p span, #life-count, #score-count, #answered-count, #wrong-count { color: var(--night); font-weight: 700; }
 .game-container > #lives, .game-container > #score, .game-container > #answered, .game-container > #wrong { display: inline-block; }
 
 /* Question */
 #question, #verse-partial, #reference {
-  font-family: var(--serif); font-size: clamp(1.35rem, 3vw, 1.75rem); font-weight: 600; line-height: 1.4;
+  font-family: var(--serif); font-size: clamp(1.35rem, 3vw, 1.75rem); font-weight: 700; line-height: 1.4;
   color: var(--night); margin: 10px 0 6px; max-width: 640px;
 }
 #question:empty, #verse-partial:empty, #reference:empty { display: none; }
@@ -41,7 +41,7 @@
   background: var(--ivory); border: 1px solid var(--line); color: var(--ink); font-weight: 500;
   transition: border-color .2s, background .2s, transform .15s var(--ease);
 }
-#answer-options li:hover, #options li:hover { border-color: var(--gold); background: var(--gold-soft); transform: translateY(-1px); }
+#answer-options li:hover, #options li:hover { border-color: var(--night-3); background: #eaf1fb; transform: translateY(-1px); }
 #options li.disabled { pointer-events: none; opacity: .85; }
 
 /* Champ de saisie (mémoire biblique) */
@@ -49,9 +49,9 @@
 
 /* Boutons */
 .game-container button, .puzzle-controls button {
-  font: 600 .92rem var(--sans); padding: 12px 24px; border-radius: 999px; cursor: pointer;
-  border: 1px solid transparent; background: linear-gradient(180deg, var(--gold-light), var(--gold)); color: var(--night);
-  box-shadow: 0 6px 16px rgba(195, 154, 69, .25); transition: transform .2s var(--ease), box-shadow .2s;
+  font: 700 .92rem var(--sans); padding: 12px 24px; cursor: pointer;
+  border: 2px solid transparent; background: var(--red); color: #fff; border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(230, 57, 70, .25); transition: transform .2s var(--ease), box-shadow .2s;
 }
 .game-container button:hover { transform: translateY(-1px); }
 #stop-game, #stop-button, #home-button, #go-home, #back-home {
@@ -66,11 +66,11 @@
 #game-summary p { margin: 4px 0; font-weight: 500; }
 .appreciation-message:empty { display: none; }
 .appreciation-message { padding: 18px 20px; border-radius: var(--radius); background: var(--gold-soft); text-align: left; max-width: 600px; }
-.appreciation-message .title { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; color: var(--night); }
+.appreciation-message .title { font-family: var(--serif); font-size: 1.3rem; font-weight: 700; color: var(--night); }
 .appreciation-message .advice { color: var(--ink); }
 
 .back-games { text-align: center; margin-top: 28px; }
-.back-games a { font-weight: 600; color: var(--gold); text-decoration: none; }
+.back-games a { font-weight: 700; color: var(--accent-ink); text-decoration: none; }
 
 /* ---------- Puzzle ---------- */
 .puzzle-controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 18px; }

@@ -11,7 +11,7 @@
 .toc-item:hover { border-color: var(--gold-light); transform: translateX(3px); color: var(--night); }
 .toc-num {
   flex: none; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center;
-  font-family: var(--serif); font-size: 1.25rem; font-weight: 600;
+  font-family: var(--serif); font-size: 1.25rem; font-weight: 700;
   background: var(--night); color: var(--gold-light);
 }
 
@@ -27,18 +27,18 @@
 .jour-title { margin: 0; font-size: inherit; }
 .jour-header {
   width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  font-family: var(--serif); font-size: clamp(1.3rem, 2.6vw, 1.6rem); font-weight: 600; line-height: 1.25; color: var(--night);
+  font-family: var(--serif); font-size: clamp(1.3rem, 2.6vw, 1.6rem); font-weight: 700; line-height: 1.25; color: var(--night);
   text-align: left; padding: 22px 24px; background: none; border: 0; cursor: pointer;
 }
 .jour.is-open > .jour-title .jour-header { background: linear-gradient(160deg, var(--night-2), var(--night)); color: #fff; }
-.jour.is-open > .jour-title .acc-icon { border-color: rgba(226, 194, 125, .5); color: var(--gold-light); background: rgba(226, 194, 125, .15); }
+.jour.is-open > .jour-title .acc-icon { border-color: rgba(255, 209, 92, .5); color: var(--gold-light); background: rgba(255, 209, 92, .15); }
 .jour > .section-content { padding: 18px; }
 
 /* Matin / Soir */
 .matin, .soir { margin-bottom: 12px; border-radius: var(--radius); background: var(--ivory); }
 .section-header {
   width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  font: 600 .8rem var(--sans); letter-spacing: .18em; text-transform: uppercase; color: #8a6a26;
+  font: 700 .8rem var(--sans); letter-spacing: .18em; text-transform: uppercase; color: var(--night);
   padding: 14px 16px; background: none; border: 0; cursor: pointer; text-align: left;
 }
 .section-header::before { content: "☀"; font-size: 1rem; letter-spacing: 0; margin-right: 6px; }
@@ -54,12 +54,12 @@
   font: 600 1rem var(--sans); color: var(--night); text-align: left;
   padding: 14px 16px; background: none; border: 0; cursor: pointer;
 }
-.sub-section.is-open > .sub-toggle { color: #8a6a26; }
+.sub-section.is-open > .sub-toggle { color: var(--night); }
 .sub-content { padding: 0 18px 18px; }
 
 .acc-icon {
   flex: none; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
-  border: 1px solid var(--line); color: var(--gold); transition: transform .3s var(--ease);
+  border: 1px solid var(--line); color: var(--accent-ink); transition: transform .3s var(--ease);
 }
 .acc-icon::before { content: "+"; font: 400 1.2rem/1 var(--sans); }
 [aria-expanded="true"] > .acc-icon { transform: rotate(45deg); }
