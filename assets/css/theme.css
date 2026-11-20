@@ -109,7 +109,7 @@ p { margin: 0 0 1em; }
 .menu-open .nav-toggle span::before { transform: translateY(8px) rotate(45deg); }
 .menu-open .nav-toggle span::after { transform: translateY(-8px) rotate(-45deg); }
 
-@media (max-width: 860px) {
+@media (max-width: 1080px) {
   .nav-toggle { display: block; }
   .site-nav {
     position: absolute; top: 68px; left: 0; right: 0;
