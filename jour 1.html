@@ -1,29 +1,58 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interface de Méditation</title>
-    <link rel="stylesheet" href="priere.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jour 1 · Confiance en la promesse de Dieu — Prière en Ligne 18ᵉ édition</title>
+  <meta name="description" content="18ᵉ édition de Prière en Ligne, jour 1 : Confiance en la promesse de Dieu. Méditation, requêtes de prière, déclarations de foi et soirée de prière.">
+  <meta name="theme-color" content="#0b1426">
+  <link rel="icon" href="img/logo-rond.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="priere.css">
 </head>
-<body>
+<body data-page="programmes">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Prière en Ligne, accueil">
+      <img src="img/logo-rond.jpg" alt="" width="40" height="40">
+      <span>Prière <em>en Ligne</em></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
+    <nav class="site-nav" aria-label="Menu principal">
+      <a href="index.html" data-nav="accueil">Accueil</a>
+      <a href="programmes.html" data-nav="programmes">Programmes</a>
+      <a href="mise.html" data-nav="requetes">Requêtes</a>
+      <a href="game.html" data-nav="jeux">Jeux bibliques</a>
+      <a href="appel.html" data-nav="contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    <header>
-        <h1>Méditation & Prières</h1>
-      Jour 1: Confiance en la promesse de Dieu
+<section class="hero">
+  <div class="wrap wrap-narrow">
+    <p class="eyebrow">18ᵉ édition · Jour 1 sur 3</p>
+    <h1>Confiance en la promesse de Dieu</h1>
+    <p class="lead">Thème de l'édition : « Seigneur, donne-moi cette montagne »</p>
+    <nav class="hero-meta day-chips" aria-label="Jours de l'édition"><a class="chip is-current" href="jour 1.html">Jour 1</a><a class="chip" href="jour 2.html">Jour 2</a><a class="chip" href="jour 3.html">Jour 3</a></nav>
+  </div>
 </section>
-    </header>
-<section id="accueil">
-    <h1 class="theme"> THÈME:🔥 Seigneur, donne-moi cette montagne 🔥</h1>
+
+<main class="section">
+  <div class="wrap wrap-narrow day-content prose" data-bible-links>
+    <p class="day-intro">Ouvrez chaque partie pour lire, écouter et prier. Prenez votre temps : laissez la Parole vous parler.</p>
+<div id="accueil">
+    
     <section id="menu">
-        <button class="main-btn" onclick="toggleSection('meditation')">📖 Méditation</button>
+        <button class="main-btn" type="button" data-target="meditation">Méditation</button>
         <div id="meditation" class="hidden">
-            <button class="sub-btn" onclick="toggleSubSection('verset')">📜 Verset du jour</button>
+            <button class="sub-btn" type="button" data-target="verset">Verset du jour</button>
             <div id="verset" class="hidden">
               <div id="audio-section">
     <h3>🎵 Méditation en Audio</h3>
     <audio id="audio-player" controls>
-        <source src="verset j1.mp3" type="audio/mpeg">
+        <source src="audio/verset j1.mp3" type="audio/mpeg">
         Votre navigateur ne supporte pas l'élément audio.
     </audio>
     <br>
@@ -40,12 +69,12 @@
         </blockquote>
                 <p>Avant toute chose, il est essentiel de lire le verset lentement et attentivement...</p>
             </div>
-            <button class="sub-btn" onclick="toggleSubSection('explication')">📖 Explication</button>
+            <button class="sub-btn" type="button" data-target="explication">Explication</button>
             <div id="explication" class="hidden">
               <div id="audio-section">
     <h3>🎵 Méditation en Audio</h3>
     <audio id="audio-player" controls>
-        <source src="explication j1.mp3" type="audio/mpeg">
+        <source src="audio/explication j1.mp3" type="audio/mpeg">
         Votre navigateur ne supporte pas l'élément audio.
     </audio>
     <br>
@@ -68,12 +97,12 @@
 </ul>
     
             </div>
-            <button class="sub-btn" onclick="toggleSubSection('application')">✅ Application</button>
+            <button class="sub-btn" type="button" data-target="application">Application</button>
             <div id="application" class="hidden">
               <div id="audio-section">
     <h3>🎵 Méditation en Audio</h3>
     <audio id="audio-player" controls>
-        <source src="application j1.mp3" type="audio/mpeg">
+        <source src="audio/application j1.mp3" type="audio/mpeg">
         Votre navigateur ne supporte pas l'élément audio.
     </audio>
     <br>
@@ -94,14 +123,14 @@
             </div> 
         </div>
 
-        <button class="main-btn" onclick="toggleSection('requetes')">🙌 Requêtes de prière</button>
+        <button class="main-btn" type="button" data-target="requetes">Requêtes de prière</button>
         <div id="requetes" class="hidden">
-            <button class="sub-btn" onclick="toggleSubSection('perso')">🙇 Requête personnelle</button>
+            <button class="sub-btn" type="button" data-target="perso">Requête personnelle</button>
             <div id="perso" class="hidden">
               <div id="audio-section">
     <h3>🎵 Méditation en Audio</h3>
     <audio id="audio-player" controls>
-        <source src="pers j1.mp3" type="audio/mpeg">
+        <source src="audio/pers j1.mp3" type="audio/mpeg">
         Votre navigateur ne supporte pas l'élément audio.
     </audio>
     <br>
@@ -143,12 +172,12 @@ Dieu de l’impossible, ce projet semble trop grand pour moi, mais je Te le conf
 <p><strong>1️⃣0️⃣ Prière pour un changement de situation familiale :</strong>  
 Seigneur, le restaurateur des familles, je vois cette situation comme une montagne qui ne peut être déplacée. Mais je crois en Ton pouvoir de transformation. Mets l’amour, la paix et la compréhension au sein de ma famille. <strong>Amen.</strong></p>
             </div>
-            <button class="sub-btn" onclick="toggleSubSection('eglise')">⛪ Pour l'église</button>
+            <button class="sub-btn" type="button" data-target="eglise">Pour l'église</button>
             <div id="eglise" class="hidden">
               <div id="audio-section">
     <h3>🎵 Méditation en Audio</h3>
     <audio id="audio-player" controls>
-        <source src="eglise j1.mp3" type="audio/mpeg">
+        <source src="audio/eglise j1.mp3" type="audio/mpeg">
         Votre navigateur ne supporte pas l'élément audio.
     </audio>
     <br>
@@ -240,12 +269,12 @@ Seigneur, le restaurateur des familles, je vois cette situation comme une montag
 </ul>  
 <p><strong>Amen.</strong></p>
             </div>
-            <button class="sub-btn" onclick="toggleSubSection('nation')">🌍 Pour la nation</button>
+            <button class="sub-btn" type="button" data-target="nation">Pour la nation</button>
             <div id="nation" class="hidden">
               <div id="audio-section">
     <h3>🎵 Méditation en Audio</h3>
     <audio id="audio-player" controls>
-        <source src="nation j1.mp3" type="audio/mpeg">
+        <source src="audio/nation j1.mp3" type="audio/mpeg">
         Votre navigateur ne supporte pas l'élément audio.
     </audio>
     <br>
@@ -337,12 +366,12 @@ Seigneur, le restaurateur des familles, je vois cette situation comme une montag
 </ul>  
 <p><strong>Amen.</strong></p>
             </div>
-            <button class="sub-btn" onclick="toggleSubSection('speciale')">🎯 Requête spéciale</button>
+            <button class="sub-btn" type="button" data-target="speciale">Requête spéciale</button>
             <div id="speciale" class="hidden">
               <div id="audio-section">
     <h3>🎵 Méditation en Audio</h3>
     <audio id="audio-player" controls>
-        <source src="special j1.mp3" type="audio/mpeg">
+        <source src="audio/special j1.mp3" type="audio/mpeg">
         Votre navigateur ne supporte pas l'élément audio.
     </audio>
     <br>
@@ -436,14 +465,14 @@ Seigneur, le restaurateur des familles, je vois cette situation comme une montag
             </div>
         </div>
 
-        <button class="main-btn" onclick="toggleSection('declarations')">📢 Déclarations de foi</button>
+        <button class="main-btn" type="button" data-target="declarations">Déclarations de foi</button>
         <div id="declarations" class="hidden">
-            <button class="sub-btn" onclick="toggleSubSection('sante')">❤️ Santé</button>
+            <button class="sub-btn" type="button" data-target="sante">Santé</button>
             <div id="sante" class="hidden">
               <div id="audio-section">
     <h3>🎵 Méditation en Audio</h3>
     <audio id="audio-player" controls>
-        <source src="sante j1.mp3" type="audio/mpeg">
+        <source src="audio/sante j1.mp3" type="audio/mpeg">
         Votre navigateur ne supporte pas l'élément audio.
     </audio>
     <br>
@@ -505,12 +534,12 @@ Seigneur, le restaurateur des familles, je vois cette situation comme une montag
     <li>Je vis une vie de victoire, de force et de pleine santé en Jésus-Christ.</li>  
 </ul>
             </div>
-            <button class="sub-btn" onclick="toggleSubSection('prosp')">💰 Prospérité</button>
+            <button class="sub-btn" type="button" data-target="prosp">Prospérité</button>
             <div id="prosp" class="hidden">
               <div id="audio-section">
     <h3>🎵 Méditation en Audio</h3>
     <audio id="audio-player" controls>
-        <source src="prosperite j1.mp3" type="audio/mpeg">
+        <source src="audio/prosperite j1.mp3" type="audio/mpeg">
         Votre navigateur ne supporte pas l'élément audio.
     </audio>
     <br>
@@ -572,12 +601,12 @@ Seigneur, le restaurateur des familles, je vois cette situation comme une montag
     <li>Je suis un(e) gestionnaire fidèle des ressources que Dieu m’a confiées.</li>  
 </ul>
             </div>
-         <button class="sub-btn" onclick="toggleSubSection('depr')">🧠 Combattre la depression </button>
+         <button class="sub-btn" type="button" data-target="depr">Combattre la dépression</button>
             <div id="depr" class="hidden">
               <div id="audio-section">
     <h3>🎵 Méditation en Audio</h3>
     <audio id="audio-player" controls>
-        <source src="depression j1.mp3" type="audio/mpeg">
+        <source src="audio/depression j1.mp3" type="audio/mpeg">
         Votre navigateur ne supporte pas l'élément audio.
     </audio>
     <br>
@@ -640,20 +669,20 @@ Seigneur, le restaurateur des familles, je vois cette situation comme une montag
 </ul>
             </div>
         </div>
-          <button class="main-btn" onclick="toggleSection('soir 1')">🔥 Soirée de prière</button>
+          <button class="main-btn" type="button" data-target="soir 1">Soirée de prière</button>
         <div id="soir 1" class="hidden">
-            <button class="sub-btn" onclick="toggleSubSection('prie')">❤️ Moment d'adoration</button>
+            <button class="sub-btn" type="button" data-target="prie">Moment d'adoration</button>
             <div id="prie" class="hidden">
               <div id="audio-section">
     <h3>🎵 Méditation en Audio</h3>
     <audio id="audio-player" controls>
-        <source src="force.mp3" type="audio/mpeg">
+        <source src="audio/force.mp3" type="audio/mpeg">
         Votre navigateur ne supporte pas l'élément audio.
     </audio>
             <div id="audio-section">
     <h3>🎵 Méditation en Audio</h3>
     <audio id="audio-player" controls>
-        <source src="prendplace.mp3" type="audio/mpeg">
+        <source src="audio/prendplace.mp3" type="audio/mpeg">
         Votre navigateur ne supporte pas l'élément audio.
     </audio>
     <br>
@@ -663,12 +692,12 @@ Seigneur, le restaurateur des familles, je vois cette situation comme une montag
 </div>
             </div>
         </div>
-            <button class="sub-btn" onclick="toggleSubSection('exhort 1')">💰 Exhortation du soir</button>
+            <button class="sub-btn" type="button" data-target="exhort 1">Exhortation du soir</button>
             <div id="exhort 1" class="hidden">
               <div id="audio-section">
     <h3>🎵 Méditation en Audio</h3>
     <audio id="audio-player" controls>
-        <source src="exhort 1.mp3" type="audio/mpeg">
+        <source src="audio/exhort 1.mp3" type="audio/mpeg">
         Votre navigateur ne supporte pas l'élément audio.
     </audio>
     <br>
@@ -706,12 +735,12 @@ Rien ne se donne facilement dans le domaine spirituel. <strong>Tout ce qui appar
 
 <p><strong>Soyez bénis et fortifiés !</strong></p>
             </div>
-         <button class="sub-btn" onclick="toggleSubSection('combat 1')">🧠 Prière de combat et de possesion Jour1 </button>
+         <button class="sub-btn" type="button" data-target="combat 1">Prière de combat et de possession Jour1</button>
             <div id="combat 1" class="hidden">
               <div id="audio-section">
     <h3>🎵 Méditation en Audio</h3>
     <audio id="audio-player" controls>
-        <source src="psoir 1.mp3" type="audio/mpeg">
+        <source src="audio/psoir 1.mp3" type="audio/mpeg">
         Votre navigateur ne supporte pas l'élément audio.
     </audio>
     <br>
@@ -754,7 +783,38 @@ Rien ne se donne facilement dans le domaine spirituel. <strong>Tout ce qui appar
                
             </div>
         </div>
-    </section>
-    <script src="priere.js"></script>
+    </div>
+    <div class="btn-row day-pager"><a class="btn btn-outline" href="edition.html">Tous les jours</a><a class="btn" href="jour 2.html">Jour 2 →</a></div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><img src="img/logo-rond.jpg" alt="" width="40" height="40"><span>Prière <em>en Ligne</em></span></a>
+        <p>Un espace dédié à la prière, à la méditation de la Parole et à la communion avec Dieu.</p>
+      </div>
+      <div>
+        <h4>Explorer</h4>
+        <a href="programmes.html">Programmes de jeûne</a>
+        <a href="mise.html">Bibliothèque de requêtes</a>
+        <a href="game.html">Jeux bibliques</a>
+      </div>
+      <div>
+        <h4>Nous rejoindre</h4>
+        <a href="https://chat.whatsapp.com/JnEG13M6Zpk2LB85yLtRE8" target="_blank" rel="noopener">Groupe WhatsApp</a>
+        <a href="https://wa.me/2290164013074" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+        <a href="mailto:enlignepriere@gmail.com">enlignepriere@gmail.com</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span data-year>2026</span> Prière en Ligne · Tous droits réservés</span>
+      <span>Cotonou, Bénin</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+<script src="priere.js"></script>
 </body>
 </html>

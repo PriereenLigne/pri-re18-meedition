@@ -1,56 +1,116 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puzzle Biblique</title>
-    <link rel="stylesheet" href="puzzle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Puzzle biblique — Jeux bibliques — Prière en Ligne</title>
+  <meta name="description" content="Touchez deux pièces pour les échanger, jusqu'à reconstituer l'image.">
+  <meta name="theme-color" content="#0b1426">
+  <link rel="icon" href="img/logo-rond.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/games.css">
 </head>
-<body>
-    <h1>Puzzle Biblique</h1>
-    <p><h3>Reconstitue l'image en plaçant correctement les pièces.</h3></p>
+<body data-page="jeux" class="game-page">
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Prière en Ligne, accueil">
+      <img src="img/logo-rond.jpg" alt="" width="40" height="40">
+      <span>Prière <em>en Ligne</em></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span></button>
+    <nav class="site-nav" aria-label="Menu principal">
+      <a href="index.html" data-nav="accueil">Accueil</a>
+      <a href="programmes.html" data-nav="programmes">Programmes</a>
+      <a href="mise.html" data-nav="requetes">Requêtes</a>
+      <a href="game.html" data-nav="jeux">Jeux bibliques</a>
+      <a href="appel.html" data-nav="contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    <div id="game-info">
-        <span>Score : <span id="score">0</span></span>
-        <span>Vies restantes : <span id="lives">3</span></span>
-        <span>Temps restant : <span id="timer">00:00</span></span>
+<section class="hero hero-game">
+  <div class="wrap wrap-narrow">
+    <p class="eyebrow"><a href="game.html">Jeux bibliques</a></p>
+    <h1>Puzzle biblique</h1>
+    <p class="lead">Touchez deux pièces pour les échanger, jusqu'à reconstituer l'image.</p>
+  </div>
+</section>
+
+<main class="section game-main">
+  <div class="wrap wrap-narrow">
+    <div class="game-card">
+      <div id="game-info">
+        <p>Coups : <span id="moves">0</span></p>
+        <p>Pièces bien placées : <span id="placed">0</span></p>
+        <p>Temps : <span id="timer">00:00</span></p>
+      </div>
+      <div class="puzzle-controls">
+        <select id="image-selector" aria-label="Choisir l'image">
+          <option value="img/pu.jpg">Image 1</option>
+          <option value="img/pu2.jpg">Image 2</option>
+          <option value="img/pu3.jpg">Image 3</option>
+          <option value="img/pu4.jpg">Image 4</option>
+          <option value="img/pu5.jpg">Image 5</option>
+          <option value="img/pu6.jpg">Image 6</option>
+          <option value="img/pu7.jpg">Image 7</option>
+          <option value="img/pu8.jpg">Image 8</option>
+          <option value="img/pu9.jpg">Image 9</option>
+          <option value="img/pu10.jpg">Image 10</option>
+          <option value="img/pu11.jpg">Image 11</option>
+          <option value="img/pu12.jpg">Image 12</option>
+          <option value="img/pu13.jpg">Image 13</option>
+        </select>
+        <select id="difficulty-selector" aria-label="Choisir la difficulté">
+          <option value="3">Facile (3×3)</option>
+          <option value="4">Moyen (4×4)</option>
+          <option value="5">Difficile (5×5)</option>
+          <option value="6">Très difficile (6×6)</option>
+        </select>
+        <button id="shuffle-button" type="button">Mélanger</button>
+      </div>
+      <div class="puzzle-layout">
+        <div id="game-board" aria-label="Plateau du puzzle"></div>
+        <div id="reference-container">
+          <p>Modèle</p>
+          <img id="reference-image" src="img/pu.jpg" alt="Image de référence">
+        </div>
+      </div>
+      <p id="message" aria-live="polite"></p>
+      <div class="puzzle-controls"><button id="next-button" type="button" hidden>Puzzle suivant</button></div>
     </div>
-    <select id="image-selector">
-  <option value="pu.jpg">Image 1</option>
-  <option value="pu2.jpg">Image 2</option>
-  <option value="pu3.jpg">Image 3</option>
-  <option value="pu4.jpg">Image 4</option>
-  <option value="pu5.jpg">Image 5</option>
-  <option value="pu6.jpg">Image 6</option>
-  <option value="pu7.jpg">Image 7</option>
- <option value="pu8.jpg">Image 8</option>
- <option value="pu9.jpg">Image 9</option>
- <option value="pu10.jpg">Image 10</option>
- <option value="pu11.jpg">Image 11</option>
- <option value="pu12.jpg">Image 12</option>
- <option value="pu13.jpg">Image 13</option>
-  <!-- Ajoute d'autres options pour chaque image -->
-</select>
-<select id="difficulty-selector">
-    <option value="easy">Facile (3x3)</option>
-    <option value="medium">Moyen (4x4)</option>
-    <option value="hard">Difficile (5x5)</option>
-    <option value="very-hard">Très Difficile (6x6)</option>
-</select>
-    <div id="puzzle-container">
-        <div id="game-board"></div>
+    <p class="back-games"><a href="game.html">← Tous les jeux</a></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><img src="img/logo-rond.jpg" alt="" width="40" height="40"><span>Prière <em>en Ligne</em></span></a>
+        <p>Un espace dédié à la prière, à la méditation de la Parole et à la communion avec Dieu.</p>
+      </div>
+      <div>
+        <h4>Explorer</h4>
+        <a href="programmes.html">Programmes de jeûne</a>
+        <a href="mise.html">Bibliothèque de requêtes</a>
+        <a href="game.html">Jeux bibliques</a>
+      </div>
+      <div>
+        <h4>Nous rejoindre</h4>
+        <a href="https://chat.whatsapp.com/JnEG13M6Zpk2LB85yLtRE8" target="_blank" rel="noopener">Groupe WhatsApp</a>
+        <a href="https://wa.me/2290164013074" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+        <a href="mailto:enlignepriere@gmail.com">enlignepriere@gmail.com</a>
+      </div>
     </div>
-
-    <div id="reference-container">
-        <p>Image de référence :</p>
-        <img id="reference-image" src="" alt="Référence">
+    <div class="foot-bottom">
+      <span>© <span data-year>2026</span> Prière en Ligne · Tous droits réservés</span>
+      <span>Cotonou, Bénin</span>
     </div>
-
-    <button id="next-button" style="display: none;">Puzzle Suivant</button>
-   <button id="back-button">Retour</button>
-
-    <p id="message"></p>
-
-    <script src="puzzle.js"></script>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+<script src="puzzle.js"></script>
 </body>
 </html>

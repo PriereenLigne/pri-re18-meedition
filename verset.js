@@ -176,7 +176,7 @@ function endGame() {
 
 function goToHomePage() {
     // Remplacez l'URL par la page d'accueil souhaitée (par exemple index.html)
-    window.location.href = "index.html";
+    window.location.href = "game.html";
 }
 
 loadVerse();
